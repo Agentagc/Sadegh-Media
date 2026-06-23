@@ -1,0 +1,209 @@
+
+
+.tmp-profile-card{
+    .work-experiance-card{
+        overflow: hidden;
+        height: 310px;
+        .card-title {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.333em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            margin-bottom: 12px;
+        }
+        .work-experiance-main {
+            max-height: 218px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            &:hover{
+                .work-experiance-slider{
+                    animation-play-state: paused;
+                }
+            }
+        }
+        .work-experiance-slider {
+            animation: scrollY 10s linear infinite;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 10px;
+            li{
+                display: flex !important;
+                gap: 30px;
+                padding: 10px 15px;
+                background: #141c21;
+                border-radius: 5px;
+                &:first-child{
+                    margin-top: 0;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                .date{
+                    margin-right: 40px;
+                    p{
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                }
+                .info{
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 12px;
+                    .icon{
+                        border-radius: 8px;
+                        width: 32px;
+                        height: 32px;
+                        background-color: rgba(43, 43, 43, 0.3803921569);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img{
+                            width: 20px;
+                        }
+                    }
+                    .text{
+                        font-size: 16px;
+                        font-weight: 600;
+                        margin-top: 0;
+                        line-height: 1.5em;
+                        .title{
+                            font-size: 14px;
+                            margin-bottom: 5px;
+                        }
+                        .subtitle{
+                            font-size: 13px;
+                            font-weight: 400;
+                            line-height: 1.2;
+                            margin: 0;
+                            color: var(--color-body);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .expertise-card{
+        .card-title {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.333em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+        .expertise-item {
+            text-align: center;
+            .image {
+                background-color: rgba(43, 43, 43, 0.3803921569);
+                border-radius: 8px;
+                padding: 17px 10px;
+                img{
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+            .text .title {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 1.5em;
+                margin-top: 0;
+            }
+        }
+        .row >* {
+            margin-top: 1rem;
+        }
+        .g-2{
+            --bs-gutter-y: .5rem !important;
+            --bs-gutter-x: .5rem !important;
+        }
+        .g-3{
+            --bs-gutter-y: 1rem !important;
+            --bs-gutter-x: 1rem !important;
+        }
+    }
+    &.services-card{
+        .services-item {
+            background-color: #2b2b2b61;
+            padding: 16px 16px 24px 16px;
+            border-radius: 10px;
+            .image{
+                background-color: rgb(1 14 22);
+                border-radius: 5px;
+                padding: 25px 14px;
+                img{
+                    max-width: 58px;
+                    margin: auto;
+                }
+            }
+            .text{
+                .title{
+                    font-size: 18px !important;
+                    margin: 0;
+                }
+            }
+        }
+        .card-title{
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.333em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+    }
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+.expertise-card {
+    height: 310px;
+    @media #{$sm-layout} {
+        height: auto;
+    }
+}
+@keyframes scrollY {
+	0% {
+		transform: translateY(0)
+	}
+
+	to {
+		transform: translateY(calc(-100% - 1rem))
+	}
+}
+
+.tmp-contact-form.contact-form-style-1{
+    &.in-bentogrid{
+        border: none;
+        padding: 0;
+        form .form-group textarea{
+            min-height: auto !important;
+        }
+    }
+}
+
+.height-auto{
+    height: auto !important;
+}
+.personal-demo-left-fixed{
+    .tmponhover {
+        border: transparent !important;
+    }
+    .experience-style-list .experience-list .resume-single-list {
+        margin-top: 30px;
+    }
+}
+#tmp-page-content-bento .pricing-table-col-2 {
+    .tmp-btn.tmp-modern-button {
+        display: flex;
+        justify-content: center;
+    }
+}

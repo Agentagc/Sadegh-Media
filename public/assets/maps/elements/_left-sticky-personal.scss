@@ -1,0 +1,104 @@
+
+
+.personal-portfolio-right-inner-wrapper{
+    max-width: 80%;
+    margin-right: auto;
+    p{
+        font-weight: 400;
+    }
+    .section-header .subtitle {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        color: var(--color-body);
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        i{
+            margin-right: 10px;
+        }
+    }
+    .tmp-title-split{
+        font-weight: 500;
+        @media #{$large-mobile} {
+            font-size: 22px;
+        }
+        span{
+            color: var(--color-primary);
+        }
+    }
+    .section-header h1 {
+        font-weight: 400;
+        line-height: 1.3;
+        font-size: 48px;
+        @media #{$laptop-device} {
+            font-size: 42px;
+        }
+        @media #{$smlg-device} {
+            font-size: 38px;
+        }
+        @media #{$sm-layout} {
+            font-size: 26px;
+        }
+        span{
+            color: var(--color-primary);
+        }
+    }
+    .counter-style-2 {
+        margin-top: 30px;
+        .title {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    }
+    .counter-main-wrapper-card{
+        background-color: transparent;
+        border: none;
+        border-radius: 4px;
+        width: 100%;
+        height: 170px;
+        background-color: #010a10;
+        margin-bottom: 0;
+    }
+    .counter-style-2.border-style.small-radious .count-number {
+        background-color: transparent;
+    }
+    .counter-style-2{
+        .description {
+            padding: 0 0;
+        }
+        .count-number{
+            background-color: transparent;
+            border: none;
+            border-radius: 4px;
+            width: 100%;
+            height: 170px;
+            background-color: #1b1b1c;
+            font-size: 44px;
+            background-color: #1b1b1c;
+            display: inline-block;
+            min-width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 160px;
+            margin-bottom: 20px;
+            padding: 0 20px;
+            font-weight: 500;
+            color: var(--color-heading);
+            margin-bottom: 0;
+        }
+    }
+    .tmponhover::after {
+        border-radius: 5px;
+    }
+    .contact-area-left-portfolio-fixed{
+        .thumbnail{
+            height: 100%;
+            img{
+                height: 100%;
+                z-index: 10;
+                position: relative;
+            }
+        }
+    }
+}

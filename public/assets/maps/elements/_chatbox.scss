@@ -1,0 +1,187 @@
+
+
+.ready-chatting-option{
+    max-width: max-content;
+    &.chat-visible{
+        label{
+            bottom: 90px !important;
+            @media #{$large-mobile} {
+              bottom: 70px !important;
+            }
+        }
+    }
+    #click{
+        display: none;
+      }
+      label{
+        bottom: 20px;
+        height: 55px;
+        width: 55px;
+        background: var(--color-primary);
+        text-align: center;
+        line-height: 55px;
+        border-radius: 50px;
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+        position: fixed !important;
+        left: 20px;
+        z-index: 1019;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .3s;
+        z-index: 1000;
+        @media #{$large-mobile} {
+          height: 40px;
+          width: 40px;
+        }
+        &::before{
+            display: none;
+        }
+        &::after{
+            display: none;
+        }
+      }
+      label i{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.4s ease;
+        font-size: 22px;
+        color: #fff;
+      }
+      label i.fas{
+        opacity: 0;
+        pointer-events: none;
+      }
+      #click:checked ~ label i.fas{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+      #click:checked ~ label i.fab{
+        opacity: 0;
+        pointer-events: none;
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+      .wrapper{
+        position: fixed;
+        left: 90px;
+        bottom: 30px;
+        max-width: 400px;
+        background: var(--color-gray-2);
+        border-radius: 5px;
+        box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+        opacity: 0;
+        z-index: 1100;
+        pointer-events: none;
+        transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+        @media #{$large-mobile} {
+          max-width: 280px;
+          left: 65px;
+        }
+        @media #{$small-mobile} {
+          left: 15px;
+          bottom: 90px;
+        }
+      }
+      #click:checked ~ .wrapper{
+        opacity: 1;
+        bottom: 85px;
+        pointer-events: auto;
+        box-shadow: 0px 0px 8px 0px rgb(255 255 255 / 7%);
+        @media #{$small-mobile} {
+          bottom: 112px;
+        }
+      }
+      .wrapper .head-text{
+        line-height: 1.5;
+        color: #fff;
+        border-radius: 5px 5px 0 0;
+        padding: 15px 20px;
+        font-weight: 500;
+        font-size: 20px;
+        background: var(--color-primary);
+      }
+      .wrapper .chat-box{
+        padding: 20px;
+        width: 100%;
+        @media #{$large-mobile} {
+          padding: 10px;
+        }
+      }
+      .chat-box .desc-text{
+        color: var(--color-body);
+        text-align: center;
+        line-height: 25px;
+        font-size: 17px;
+        font-weight: 500;
+      }
+      .chat-box form{
+        padding: 10px 15px;
+        margin: 20px 0;
+        border-radius: 5px;
+        border: 2px solid var(--color-border);
+      }
+      .chat-box form .field{
+        height: 50px;
+        width: 100%;
+        margin-top: 20px;
+      }
+      .chat-box form .field:last-child{
+        margin-bottom: 15px;
+      }
+      form .field input,
+      form .field button,
+      form .textarea textarea{
+        width: 100%;
+        height: 100%;
+        padding-left: 20px;
+        border: 2px solid var(--color-border);
+        outline: none;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        color: var(--color-body);
+        font-family: var(--font-secondary);
+      }
+      form .field input:focus,
+      form .textarea textarea:focus{
+        border-color: var(--color-primary);
+      }
+      form .field input::placeholder,
+      form .textarea textarea::placeholder{
+        color: var(--color-body);
+        transition: all 0.3s ease;
+      }
+      form .field input:focus::placeholder,
+      form .textarea textarea:focus::placeholder{
+        color: var(--color-body);
+      }
+      .chat-box form .textarea{
+        height: 70px;
+        width: 100%;
+      }
+      .chat-box form .textarea textarea{
+        height: 100%;
+        border-radius: 5px;
+        resize: none;
+        padding: 15px 20px;
+        font-size: 16px;
+      }
+      .chat-box form .field button {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        background: var(--color-primary);
+        transition: all 0.3s ease;
+      }
+      .chat-box form .field button:active{
+        transform: scale(0.97);
+      }
+}

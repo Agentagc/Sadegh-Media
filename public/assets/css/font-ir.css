@@ -1,0 +1,153 @@
+@import url(aghdasi-typo/typography.css);
+
+/*
+* RTL File By Farham Aghdasi
+! RTL-THEMES | Orginal Version With Comments
+* Virtuo HTML Template 1404-1405
+*/
+
+/**
+* 50+ Persian Font In Template For free
+* Support me by giving me 5 star !  
+*/
+:root {
+  --font-anjoman: "anjoman";
+  --font-anjoman-bold: "anjoman-bold";
+  --font-aviny: "aviny";
+  --font-behdad: "behdad";
+  --font-dima: "dima";
+  --font-dordane: "dordane";
+  --font-dastnevis: "dastnevis";
+  --font-dana: "dana";
+  --font-dana-bold: "dana-bold";
+  --font-dana-bold-latin: "dana-bold-latin";
+  --font-dana-light: "dana-light";
+  --font-dana-medium: "dana-medium";
+  --font-dana-regular: "dana-regular";
+  --font-dana-thin: "dana-thin";
+  --font-fanavari-bold: "fanavari-bold";
+  --font-fanavari-regular: "fanavari-regular";
+  --font-estedad-bold: "estedad-bold";
+  --font-estedad-light: "estedad-light";
+  --font-estedad-medium: "estedad-medium";
+  --font-hilda: "hilda";
+  --font-hekayat: "hekayat";
+  --font-hana: "hana";
+  --font-hala: "hala";
+  --font-hoor: "hoor";
+  --font-iran: "iran";
+  --font-iran-gerd: "iran-gerd";
+  --font-khandevane: "khandevane";
+  --font-kalameh: "kalameh";
+  --font-khaton: "khaton";
+  --font-lalezar: "lalezar";
+  --font-mahboubeh: "mahboubeh";
+  --font-nahid: "nahid";
+  --font-negaar: "negaar";
+  --font-negaar-bold: "negaar-bold";
+  --font-nic: "nic";
+  --font-pinar: "pinar";
+  --font-pinar-ds1: "pinar ds1";
+  --font-pinar-ds2: "pinar ds2";
+  --font-iranyekan: "iranyekan";
+  --font-iranyekanweb: "iranyekanweb";
+  --font-vazirmatn-thin: "vazirmatn";
+  --font-vazirmatn-extralight: "vazirmatn";
+  --font-vazirmatn-light: "vazirmatn";
+  --font-vazirmatn-regular: "vazirmatn";
+  --font-vazirmatn-medium: "vazirmatn";
+  --font-vazirmatn-semibold: "vazirmatn";
+  --font-vazirmatn-bold: "vazirmatn";
+  --font-vazirmatn-extrabold: "vazirmatn";
+  --font-vazirmatn-black: "vazirmatn";
+  --font-yekanbakh-light: "yekanbakh";
+  --font-estedad: "estedad";
+  --font-yekanbakh-regular: "yekanbakh";
+  --font-yekanbakh-semibold: "yekanbakh";
+  --font-yekanbakh-bold: "yekanbakh";
+  --font-yekanbakh-extrabold: "yekanbakh";
+  --font-iransans: "iransans";
+  --font-iransans-medium: "iransans-medium";
+}
+
+/**
+  * Fonts
+  */
+h1 {
+  font-family: "Gofteh", Sans-serif !important;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Morabba", Sans-serif !important;
+}
+
+p , .edu-title , .main-price , .pricing-table-col-2 .pricing-table-header h3{
+  font-family: "YekanBakhFaNum-Regular", Sans-serif !important;
+}
+
+*:not(h1, h2, h3, h4, h5, h6, i, p) {
+  font-family: "IRANYekanX", Sans-serif !important;
+}
+
+
+/*-----------------------------------
+  RTL Direction Setup
+------------------------------------*/
+body {
+  direction: rtl;
+  overflow-x: hidden !important;
+}
+.tmp-btn i {
+  vertical-align: baseline;
+}
+.button-group-pd .tmp-btn i {
+  vertical-align: middle;
+}
+.year-number .odometer-inside,
+.odometer.odometer-auto-theme {
+  direction: ltr;
+}
+
+.r-40 {
+  right: 40% !important;
+}
+.r-35 {
+  right: 35% !important;
+}
+@media screen and (max-width: 1000px) {
+  .r-40 {
+    right: 35% !important;
+  }
+  .r-35 {
+    right: 30% !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .r-35 {
+    right: 35% !important;
+  }
+}
+
+* {
+  letter-spacing: 0 !important;
+}
+
+.footer-widget.widget-2 .footer-list li a:before
+{
+  transform: translateY(-50%) scale(-1,1) !important;
+}
+.swiper-button-prev i,
+.swiper-button-next i,
+.rotate-image,
+img[src$="images/banner/shape/light.svg"] {
+  transform: scale(-1,1) !important;
+}
+
+
+button i {
+  vertical-align: middle;
+}

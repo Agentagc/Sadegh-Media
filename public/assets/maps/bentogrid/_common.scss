@@ -1,0 +1,54 @@
+
+#tmp-page-content-bento{
+    padding: 24px 0 24px 0;
+	@media #{$md-layout} {
+		padding: 24px 0 100px 0;
+	}
+	@media #{$sm-layout} {
+		padding: 24px 0 100px 0;
+	}
+	@media #{$large-mobile} {
+		padding: 24px 0 140px 0;
+	}
+	.personal-portfolio-right-inner-wrapper .section-header h1 {
+		font-size: 46px;
+	}
+	.no-radius .progress {
+		border-radius: 4px;
+		height: 10px;
+	}
+	.experience-style-list .experience-list .resume-single-list{
+		margin-top: 30px;
+		position: sticky;
+		top: 100px;
+	}
+	.experience-list.animation-action-2 {
+		height: 100%;
+	}
+}
+
+
+.btn-copy{
+    position: relative;
+    z-index: 1;
+    overflow: visible !important;
+}
+.btn-copy::before {
+	position: absolute;
+	content: "Copied to clipboard";
+	background-color: #363636;
+	font-size: 12px;
+	font-weight: 600;
+	color: #fff;
+	border-radius: 5px;
+	padding: 4px 12px;
+	line-height: 14px;
+	white-space: nowrap;
+	top: -28px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: none;
+}
+.btn-copy.active::before {
+	display: block !important;
+}

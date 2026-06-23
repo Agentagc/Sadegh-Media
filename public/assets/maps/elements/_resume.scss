@@ -1,0 +1,91 @@
+.resume-widget .resume-single {
+	position: relative;
+	padding: 20px 30px;
+	margin-bottom: 30px;
+	border-radius: 20px;
+	background: var(--color-gray-2);
+	z-index: 10;
+    overflow: hidden;
+    &::after{
+        transition: all 0.8s ease;
+        content: " ";
+        position: absolute;
+        bottom: -313px;
+        right: -407px;
+        width: 474px;
+        height: 474px;
+        border-radius: 100%;
+        filter: blur(227px);
+        opacity: 0;
+        pointer-events: none;
+    }
+    &:hover{
+        &::after{
+            background: var(--color-primary);
+            opacity: 1;
+        }
+    }
+}
+
+.resume-section{
+    .section-title{
+        i{
+            color: var(--color-primary);
+            margin-right: 6px;
+            opacity: 0.2;
+        }
+    }
+}
+
+.resume-widget .resume-single:hover:before {
+	opacity: 1;
+}
+.resume-widget .resume-single .time {
+	color: var(--color-primary);
+	font-size: 20px;
+	font-weight: 800;
+	margin-bottom: 8px;
+    gap: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.resume-widget .resume-single .time i {
+    opacity: 1;
+    font-size: 14px;
+    position: relative;
+    top: 3px;
+    &::after{
+        display: none;
+    }
+    &::before{
+        top: -10px;
+    }
+}
+.resume-widget .resume-single {
+    .institute{
+        color: var(--color-gray);
+    }
+}
+.resume-widget .resume-single:hover .time {
+	color: var(--color-primary);
+}
+.resume-widget .resume-single .resume-title {
+	font-size: 25px;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+    @media #{$md-layout} {
+        font-size: 20px;
+    }
+    @media #{$sm-layout} {
+        font-size: 20px;
+    }
+}
+
+.resume-section{
+    .section-title{
+        i{
+            font-family: 'fontawesome';
+        }
+    }
+}

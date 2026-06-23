@@ -1,0 +1,341 @@
+
+.tmp-intro-video-card-wrapper {
+    position: fixed;
+    z-index: 1008;
+    right: 20px;
+    bottom: 20px;
+    width: 180px;
+    height: 280px;
+    transition: all .25s ease-in-out;
+    border-radius: 8px;
+    opacity: 1;
+    background: var(--color-card);
+    box-shadow: 0 20px 48px rgb(0 0 0 / 10%);
+    cursor: pointer;
+    @media #{$large-mobile} {
+        right: 20px;
+        bottom: 20px;
+    }
+    &.position-left {
+        right: auto;
+        left: 20px;
+
+        .card-greeting {
+            left: calc(100% - 32px);
+            right: auto;
+            border-radius: 20px 20px 20px 5px;
+        }
+
+        .tmp-iv-close-button {
+            left: -10px;
+            right: auto;
+        }
+
+        .play-button {
+            left: 35px;
+            right: auto;
+        }
+
+        .sound-button {
+            left: 5px;
+            right: auto;
+        }
+
+        &.is-expanded {
+            .play-button {
+                left: 50px;
+                right: auto;
+            }
+
+            .sound-button {
+                left: 10px;
+                right: auto;
+            }
+        }
+    }
+}
+
+.tmp-video-controls {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.tmp-intro-video-card-wrapper:hover {
+    .tmp-video-controls {
+        opacity: 1;
+    }
+}
+
+
+.tmp-video-inner {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    position: relative;
+}
+
+.tmp-video-progress-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.tmp-video-element {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 4px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.card-greeting {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: auto;
+    align-items: center;
+    justify-content: center;
+    min-width: 72px;
+    width: max-content;
+    min-height: 36px;
+    -webkit-animation: bounce-fade 0.4s;
+    animation: bounce-fade 0.4s;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+    border-radius: 20px 20px 5px;
+    opacity: 1;
+    background: var(--color-primary);
+    box-shadow: 2px 2px 20px rgb(0 0 0 / 15%);
+    text-align: center;
+    animation-fill-mode: forwards;
+    display: flex;
+    padding: 5px 10px;
+    right: calc(100% - 32px);
+}
+
+.card-greeting p {
+    color: #fff;
+    line-height: 20px;
+}
+
+.is-expanded .card-greeting {
+    display: none;
+}
+
+.play-button,
+.sound-button,
+.expand-icon {
+    position: absolute;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 16px;
+    border-radius: 100px;
+    transition: 0.3s;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, .2))
+}
+
+.play-button:hover,
+.sound-button:hover,
+.expand-icon:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.play-button {
+    right: 35px;
+    top: 5px;
+}
+
+.play-button.position-center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.playing .play-button {
+    .feather-play:before {
+        content: "\e9a4" !important;
+    }
+}
+.playing .play-button{
+    .fa-pause:before {
+        content: "\f04b" !important;
+    }
+}
+
+.sound-button {
+    right: 5px;
+    top: 5px;
+}
+
+.sound-button.sound-muted {
+    .fa-volume:before {
+        content: "\f6a9" !important;
+    }
+}
+
+.expand-icon {
+    right: 5px;
+    bottom: 5px;
+
+    i {
+        font-size: 20px;
+    }
+}
+
+.expand-icon:hover {
+    transform: scale(1.3);
+    //background: rgba(255,255,255,1);
+}
+
+.is-expanded .expand-icon {
+    right: 10px;
+    bottom: 10px;
+
+    .feather-maximize-2:before {
+        content: "\e995" !important;
+    }
+}
+
+.tmp-intro-video-card-wrapper.is-expanded {
+    width: 360px;
+    height: 666px;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+    @media #{$large-mobile} {
+        width: 300px;
+        height: auto;
+    }
+}
+
+
+.is-expanded {
+
+    .play-button,
+    .sound-button,
+    .expand-icon {
+        width: 40px;
+        height: 40px;
+        line-height: 43px;
+        font-size: 25px;
+    }
+}
+
+.is-expanded {
+    .play-button {
+        top: 10px;
+        right: 50px;
+    }
+}
+
+.is-expanded {
+    .sound-button {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+.tmp-iv-close-button {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    background: linear-gradient(to right bottom, #212428, #16181c);
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    color: var(--color-primary);
+    font-size: 16px;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 100%;
+    opacity: 1;
+    transition: 0.3s;
+    transform: scale(0.8);
+}
+
+.tmp-iv-close-button i {
+    font-weight: 900;
+}
+
+.tmp-intro-video-card-wrapper:hover {
+    .tmp-iv-close-button {
+        opacity: 1;
+    }
+}
+
+.is-expanded {
+    .tmp-iv-close-button {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+.tmp-iv-top-wrapper {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    pointer-events: none;
+
+    display: none;
+
+}
+
+.tmp-iv-progress-bar {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 5px;
+    margin-bottom: 0;
+    cursor: pointer;
+    background: rgb(0 0 0 / 0);
+    border-radius: 0 0 8px 8px;
+
+    span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 0;
+        height: 100%;
+    }
+
+    .time-bar {
+        z-index: 10;
+        background: var(--color-primary);
+    }
+
+    .buffer-bar {
+        z-index: 5;
+        background: var(--color-primary);
+        opacity: 0.3;
+    }
+}
+
+
+body.white-version {
+    .tmp-intro-video-card-wrapper {
+        background: #000;
+    }
+
+    .tmp-video-element {
+        background: rgb(0 0 0 / 10%);
+    }
+
+    .card-greeting p {
+        color: white;
+    }
+
+    // .tmp-iv-close-button {
+    //     background: var(--gradient-box-w);
+    //     box-shadow: var(--shadow-white-3);
+    // }
+}

@@ -1,0 +1,238 @@
+/*===============================
+  About Me Section Card
+===============================*/
+
+.personal-page-inner-wrapper {
+    @media #{$lg-layout} {
+        margin-top: 40px;
+    }
+    @media #{$md-layout} {
+        margin-top: 40px;
+    }
+    @media #{$sm-layout} {
+        margin-top: 40px;
+    }
+}
+
+.about-us-section-card {
+    .about-us-card {
+        border-radius: 20px;
+        background: var(--color-gray-2);
+        padding: 25px;
+        height: 100%;
+        .card-head {
+         
+            .logo-img {
+                width: 65px;
+                height: 65px;
+                background: var(--icon-gradient);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100px;
+                min-width: 65px;
+                box-shadow: var(--shadow-1);
+                margin-bottom: 30px;
+                margin-left: 0;
+                i {
+                    font-size: 24px;
+                    color: var(--color-white);
+                }
+            }
+            .card-title {
+                color: var(--color-heading);
+                font-family: var(--font-primary);
+                font-size: 28px;
+                font-weight: 700;
+                line-height: 1.3;
+                margin-bottom: 30px;
+                @media #{$lg-layout} {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .card-para {
+            color: var(--color-gray);
+            font-family: var(--font-secondary);
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 32px;
+            @media #{$sm-layout} {
+                font-size: 16px;
+                line-height: 28px;
+            }
+        }
+    }
+}
+
+/*===============================
+  About Me Left Content Wrap
+  ===============================*/
+.about-us-left-content-wrap {
+    position: relative;
+    z-index: 1;
+    @media (min-width: 992px) and (max-width: 1200px) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    @media #{$sm-layout} {
+        padding: 0;
+    }
+    &.bg-vactor-one {
+        &::after {
+            content: " ";
+            position: absolute;
+            left: 0;
+            top: 197px;
+            background: linear-gradient(0deg, rgba(255, 1, 79, 0.00) 15.49%, var(--color-primary) 100%);
+            filter: blur(50px);
+            border-radius: 100%;
+            width: 410px;
+            height: 410px;
+            z-index: -1;
+            @media #{$md-layout} {
+                width: 250px;
+                height: 250px;
+            }
+            @media #{$sm-layout} {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+
+    &.bg-vactor-two {
+        &::after {
+            content: " ";
+            position: absolute;
+            left: 0;
+            top: 197px;
+            background: linear-gradient(0deg, rgba(255, 1, 79, 0.00) 15.49%, #FDC448 100%);
+            filter: blur(2px);
+            border-radius: 100%;
+            width: 410px;
+            height: 410px;
+            z-index: -1;
+        }
+    }
+
+    .years-of-experience-card {
+        border-radius: 20px;
+        border: 0.5px solid rgba(255, 255, 255, 0.05);
+        background: var(--color-gray-2);
+        box-shadow: 15px 26.023px 50px 0px rgba(253, 196, 72, 0.04);
+        backdrop-filter: blur(35px);
+        padding: 64px 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @media #{$md-layout} {
+            padding: 40px 30px;
+        }
+        @media #{$sm-layout} {
+            padding: 40px 30px;
+        }
+        .counter-main {
+            width: 150px;
+            height: 150px;
+            background: #060606;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100px;
+            margin-bottom: 0;
+            min-width: 100px;
+            .card-title {
+                color: var(--color-primary);
+                font-family: var(--font-primary);
+                font-size: 68px;
+                font-weight: 700;
+                line-height: 78px;
+            }
+        }
+        .card-title {
+            margin-bottom: .5rem;
+            font-size: 80px;
+            @media #{$md-layout} {
+                font-size: 60px;
+            }
+            @media #{$sm-layout} {
+                font-size: 60px;
+            }
+        }
+        .card-para {
+            color: var(--color-heading);
+            font-family: var(--font-primary);
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 60px;
+            text-transform: capitalize;
+            text-align: center;
+            margin-top: 20px;
+            @media #{$sm-layout} {
+                font-size: 32px;
+                line-height: 42px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .design-card {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        border-radius: 20px;
+        border: 0.5px solid rgba(255, 255, 255, 0.05);
+        background: var(--color-gray-2);
+        box-shadow: 15px 26.023px 50px 0px rgba(253, 196, 72, 0.04);
+        backdrop-filter: blur(35px);
+        padding: 30px;
+        margin-top: 30px;
+        @media #{$sm-layout} {
+            gap: 15px;
+            padding: 30px 15px;
+        }
+        .design-card-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--color-primary);
+            @media #{$sm-layout} {
+                width: 60px;
+                height: 60px;
+                min-width: 60px;
+            }
+            i {
+                color: var(--color-primary);
+                font-size: 40px;
+                @media #{$sm-layout} {
+                    font-size: 26px;
+                }
+            }
+            img {
+                @media #{$sm-layout} {
+                    max-height: 30px;
+                }
+            }
+        }
+        .card-info{
+            p{
+                color: var(--color-heading);
+            }
+        }
+    }
+}
+
+.about-thumbnail-large-style-two{
+    padding: 25px;
+    background: var(--color-gray-2);
+    border-radius: 15px;
+    @media #{$large-mobile} {
+        padding: 18px;
+    }
+}

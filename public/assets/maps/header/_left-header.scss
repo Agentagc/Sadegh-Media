@@ -1,0 +1,172 @@
+// header-left-style
+.header-left-sticky {
+    position: fixed;
+    left: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+    min-height: 100vh;
+    top: 0px;
+    width: 290px;
+    z-index: 2;
+    transform: translateX(0px);
+    border-right: 2px solid var(--color-border);
+    background: var(--color-gray-2);
+    transition: all 0.3s ease-in-out 0s;
+    .inner-wrapper {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        padding: 50px 40px 40px;
+        @media #{$laptop-device} {
+            padding: 20px 40px 20px;
+        }
+        &::after {
+            content: " ";
+            position: absolute;
+            right: -450px;
+            bottom: -500px;
+            min-width: 474px;
+            min-height: 474px;
+            border-radius: 100px;
+            filter: blur(227px);
+            z-index: 1;
+            background: var(--color-primary);
+        }
+    }
+    .logo-area {
+        a {
+            img {
+                border-radius: 100%;
+                border: 5px solid var(--color-border);
+            }
+        }
+    }
+    .mainmenu-nav {
+        .primary-menu {
+            display: block;
+            margin-top: 50px;
+            width: 100%;
+            border-radius: 10px;
+            margin: 0;
+            padding: 30px 0 0 10px;
+            @media #{$laptop-device} {
+                padding: 15px 0 0 10px;
+            }
+            li {
+                margin: 0;
+                a {
+                    display: flex;
+                    align-items: center;
+                    border: none;
+                    font-size: 18px;
+                    color: var(--color-body);
+                    border-radius: 10px;
+                    width: 100%;
+                    margin-left: 0;
+                    margin: 8px 0;
+                    font-size: 16px;
+                    transition: var(--transition);
+                    font-weight: 500;
+                    font-family: var(--font-secondary);
+                    position: relative;
+                    @media #{$laptop-device} {
+                        margin: 5px 0;
+                        padding: 4px 10px;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%) scale(0.7);
+                        left: 0;
+                        background: var(--color-primary);
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 4px;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: var(--transition);
+                        z-index: -1;
+                    }
+                    &:hover {
+                        color: var(--color-primary);
+                    }
+                    &.active {
+                        color: var(--color-primary);
+                    }
+                    svg {
+                        height: 18px;
+                        width: 18px;
+                        margin-right: 8px;
+                        color: var(--color-primary);
+                        top: -1px;
+                        position: relative;
+                        opacity: 0.6;
+                    }
+                }
+                &.current {
+                    a {
+                        color: var(--color-primary) !important;
+                        &::after {
+                            opacity: 0.1;
+                            visibility: visible;
+                            transform: translateY(-50%) scale(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.page-with-left-header {
+    margin-left: 290px;
+    @media #{$laptop-device} {
+        margin-left: 320px;
+    }
+}
+@media only screen and (max-width: 1199px) {
+    .page-with-left-header {
+        margin-left: 0;
+        overflow-x: hidden;
+    }
+}
+
+// Sidebar Social Share 
+.tmp-popup-mobile-menu ,
+.tmp-header-area {
+    .social-share-style-1 {
+        border-top: 2px solid var(--color-border);
+        padding-top: 40px;
+        margin-top: 40px !important;
+        @media #{$laptop-device} {
+            padding-top: 15px;
+            margin-top: 15px !important;
+        }
+        .title {
+            font-size: 16px;
+            color: var(--color-body);
+            font-family: var(--font-secondary);
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+    }
+}
+.social-wrapper {
+    .subtitle {
+        color: var(--color-heading);
+        font-size: var(--font-size-b1);
+        line-height: var(--line-height-b1);
+        display: block;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+}
+

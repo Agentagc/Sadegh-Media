@@ -1,0 +1,143 @@
+/*===============================
+  Tmp Custom Box Tag
+  ===============================*/
+.tpm-custom-box-bg {
+    padding: 100px 15px;
+    border-radius: 40px;
+    background: var(--color-gray-2);
+   
+    @media #{$laptop-device} {
+        padding: 100px 40px;
+    }
+   
+    @media #{$md-layout} {
+        padding: 60px 15px;
+        margin: 60px 30px;
+    }
+
+    @media #{$sm-layout} {
+        padding: 60px 015px;
+        border-radius: 0;
+    }
+}
+/*===============================
+  My Expertise Area
+  ===============================*/
+.my-expertise-area {
+    .section-head {
+        padding-bottom: 0;
+    }
+
+    .header-top-inner {
+        padding-bottom: 60px;
+    }
+}
+/*===============================
+  My Expertise Eontent Wrap
+  ===============================*/
+.my-expertise-content-wrap {
+    ul {
+        li {
+            margin: 0;
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+/*===============================
+  My Expertise Card wrap
+  ===============================*/
+.my-expertise-card-wrap {
+    border-radius: 20px;
+    border: 2px solid var(--color-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 30px;
+    @media (min-width: 576px) {
+        padding: 50px 60px;
+        justify-content: space-between;
+    }
+
+    @media (min-width: 576px) and (max-width: 720px) {
+        justify-content: center;
+    }
+
+    @media #{$md-layout} {
+        gap: 25px;
+    }
+    @media #{$sm-layout} {
+        padding: 30px 15px;
+        gap: 25px;
+        justify-content: flex-start;
+    }
+    @media #{$large-mobile} {
+        flex-direction: column;
+    }
+
+
+    .expertise-card-left {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        flex-basis: 28%;
+        @media (min-width: 576px) {
+            justify-content: inherit;
+            justify-content: flex-start;
+            flex-basis: 28%;
+        }
+        @media #{$large-mobile} {
+            justify-content: center;
+        }
+
+        .expertise-card-logo {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100px;
+            background: var(--color-primary);
+            border: 2px solid var(--color-border);
+            img {
+                max-height: 28px;
+            }
+        }
+
+        .title {
+            color: var(--color-heading);
+            font-family: var(--font-primary);
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 130%;
+            text-transform: capitalize;
+            margin-bottom: 0;
+            text-align: center;
+
+            @media (min-width: 576px) {
+                text-align: inherit;
+            }
+        }
+    }
+
+    .para {
+        color: var(--color-gray);
+        font-family: var(--font-secondary);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        max-width: 452px;
+        text-align: center;
+        transition: all 0.4s ease;
+
+        @media (min-width: 576px) {
+            text-align: inherit;
+        }
+    }
+}

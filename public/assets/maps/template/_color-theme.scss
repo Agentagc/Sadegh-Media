@@ -1,0 +1,565 @@
+body {
+	&.color-primary-2nd {
+		--color-primary: var(--color-primary-2nd); 
+	}
+	&.color-blue{
+		--color-primary: #5237f9;
+	}
+	&.primary-yellow{
+		--color-primary: #FFB400;
+		.bg_image--8 {
+			background-image: url(../images/bg/04.webp);
+		}
+	}
+	&.color-pink{
+		--color-primary: #EA4C89;
+		.bg_image--2 {
+			background-image: url(../images/bg/bg-image-13.jpg);
+		}
+	}
+	&.color-primary-3rd {
+		--color-primary: var(--color-primary-3rd); 
+		--color-primary-alt: var(--color-primary-3rd); 
+		.services-widget.v2 .active-bg {
+			background: #ffc10714;
+		}
+	}
+
+	&.color-primary-4th {
+		--color-primary: var(--color-primary-4th); 
+	}
+
+	&.tmp-white-version {
+		background-color: #ECF0F3;
+		--color-heading: #141414;
+		--color-gray: #5d6570;
+		--color-body: #2a2d31;
+		// --color-gray-2: #f2f2f2;
+		--color-gray-2: linear-gradient(145deg, #e2e8ec, #ffffff);
+		--color-border: #dce1e4;
+		--stroke-dark-100: #dce1e4;
+		--stroke-gr: linear-gradient(317deg, #13fdfd 0%, rgba(19, 215, 253, 1) 50%, rgba(19, 191, 253, 1) 62.96%, #139bfd 100%);
+		--shadow-white: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
+		--gradient-white: linear-gradient(145deg, #e2e8ec, #ffffff);
+	
+
+		&.box-body .main-wrapper-inner {
+			background: #ffffff;
+		}
+		.newsletter-form-1 input {
+			color: #141414;
+		}
+		
+		&.demo-model .tmp-banner-one-area.style-2 {
+			background-image: url(../images/bg/03.webp);
+		}
+		.rpp-banner-five-area {
+			background-color: #EDEDED;
+		}
+		.model-style-banner.with-instructor .banner-model-15 .title{
+			color: #fff;
+		}
+
+		.tmp-banner-one-area.add-pattern::before,
+		.tmp-body-box-pattern::before {
+			background-image: linear-gradient(#554a4a, transparent 1px), linear-gradient(to right, #0c0a0a, transparent 1px);
+		}
+
+		.services-widget.v1 .service-item .my-skill-card .card-para {
+			color: var(--color-heading);
+		}
+		.services-widget.v1 .service-item.mleave .my-skill-card .card-para {
+			color: var(--color-gray);
+		}
+		&.demo-model .banner-model-15 .title{
+			color: #fff;
+		}
+		.newsletter-form-1 input::placeholder,
+		.newsletter-form-1 textarea::placeholder,
+		input::placeholder,
+		textarea::placeholder {
+			color: var(--color-gray);
+		}
+		
+		.custom-title span img {
+			filter: brightness(0.5);
+		}
+
+		.rpp-banner-two-area .banner-shape-two img {
+			opacity: 0.1;
+		}
+
+		.banner-two-main-wrapper .banner-right-content .main-img::after{
+			display: none;
+		}
+
+		.banner-two-main-wrapper .banner-right-content .main-img .logo-under-img-wrap .logo-under-img img {
+			filter: invert(1);
+		}
+		
+		.right-bg-text-para,
+		.left-bg-text-para {
+			display: none;
+		}
+		.banner-main-demo-inner-content .absolute-designation .down {
+			-webkit-text-stroke-color: #b1b1b1;
+		}
+		
+
+		.client-testimonial-swiper .swiper::before {
+			background: linear-gradient(90deg, #f4f4f4b0 0%, rgb(235 231 231 / 5%) 100%);
+		}
+		.client-testimonial-swiper .swiper::after {
+			background: linear-gradient(90deg, #f4f4f4b0 0%, rgb(235 231 231 / 5%) 100%);
+		}
+		
+		.client-testimonial-card-wrap .quat-logo img,
+		.my-skill-card .card-icon img {
+			filter: inherit;
+		}
+
+		.banner-three-main-wrapper .bg-benner-img-three::before {
+			background: linear-gradient(180deg, rgba(7, 7, 7, 0) 27.58%, #d3b0b0 80.06%);
+		}
+		svg.radial-progress text {
+			fill: #141414;
+		}
+		.service-item.current .my-expertise-card-wrap .expertise-card-left .expertise-card-logo img {
+			filter: brightness(1);
+		}
+		.service-item .my-expertise-card-wrap .expertise-card-left .expertise-card-logo img {
+			filter: brightness(0.5);
+		}
+		#side-hide,
+		.breadcrumb-area,
+		.tmp-sidebar-area .inner .top-area {
+			background: #EDEDED;
+		}
+		#side-hide .top-area,
+		.contact-info {
+			background: #ffffff;
+		}
+		.tmp-round-action-btn {
+			background: rgba(10, 10, 10, 0.06);
+			color: var(--color-heading);
+		}
+		.tmp-round-action-btn:hover {
+			color: var(--color-white);
+		}
+		.tmp-arrow-icon-btn:hover i.tmp-icon-bottom {
+			color: var(--color-white);
+		}
+		.signle-side-bar .tags-wrapper .tag-link {
+			background: rgba(10, 10, 10, 0.06);
+		}
+		.signle-side-bar .tags-wrapper .tag-link:hover {
+			color: var(--color-white);
+			background: var(--color-primary) !important;
+		}
+
+		.logo img.logo-white {
+			display: block;
+		}
+		
+		.logo img.logo-dark {
+			display: none;
+		}
+
+		.tmp-all-tab-content {
+			background: #ffffff;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		}
+
+		.tmp-all-tab-content.no-shadow {
+			background: transparent;
+			box-shadow: none;
+		}
+
+		.tmp-contact-about-inner .info-box {
+			background: var(--color-white);
+		}
+
+		.tmp-banner-one-area.style-2 {
+			background-image: url(../images/bg/bg-image-9.jpg);
+		}
+
+		.bg_image--8 {
+			background-image: url(../images/bg/bg-image-8.jpg);
+		}
+		&.primary-yellow .bg_image--8 {
+			background-image: url(../images/bg/04.webp);
+		}
+		.tmp-banner-one-area.style-4 {
+			background-image: url(../images/bg/bg-image-11.jpg);
+		}
+
+		.tmp-popup-mobile-menu .header-top .close-menu .close-button {
+			background: rgba(10, 10, 10, 0.06);
+			color: var(--color-heading);
+		}
+		
+		.newslatter .newsletter-form-1 .form-icon{
+			i{
+				color: #fff;
+			}
+		}
+		.banner-two-main-wrapper .banner-right-content .main-img .banner-big-text-2{
+			-webkit-text-stroke: 1px #fff;
+		}
+
+		.tmp-contact-about-inner {
+			border-width: 1px;
+		}
+
+		&.personal-demo-left-fixed{
+			.skill-style-border-card img{
+				filter: brightness(0) saturate(100%)
+			}
+			.pricing-table-col-2 .pricing-table-header h4,
+			.pricing-table-col-2 .pricing-table-header .top p,
+			.pricing-table-col-2 .feature-lists li,
+			.pricing-table-col-2 .pricing-table-header h3 span,
+			.pricing-table-items .info,
+			.experience-style-list .experience-list .resume-single-list:hover .inner .heading .title h4{
+				color: var(--color-heading);
+			}
+			.tmp-footer-area-style-net .bg_patern-1 {
+				background-color: rgb(255 255 255 / 56%) !important;
+			}
+			.tmp-footer-area-style-net .bg_patern-1::after {
+				opacity: .1;
+			}
+			
+			.experience-style-list .experience-list .resume-single-list {
+				background: #f4f4f4;
+			}
+			.experience-style-list .experience-list .resume-single-list .inner::after {
+				border: 5px solid #e4e4e4;
+				background: var(--color-primary);
+			}
+			.experience-style-list .experience-list .resume-single-list .inner .heading .date-of-time span{
+				background: var(--color-primary);
+			}
+			.experience-style-list .experience-list .resume-single-list .inner .heading .title span {
+				color: #333333;
+				font-weight: 500;
+			}
+			.experience-style-list .experience-list .resume-single-list .inner::before {
+				background: #e4e4e4;
+			}
+			.experience-style-list .experience-list {
+				border-left: 5px solid #e4e4e4;
+			}
+			.progress {
+				background-color: #e4e4e4;
+			}
+			.personal-portfolio-right-inner-wrapper .counter-style-2.border-style.small-radious .count-number {
+				color: #141414 !important;
+				span{
+					color: #141414 !important;
+				}
+			}
+			.experience-style-list .experience-list .resume-single-list .inner .heading {
+				border-bottom: 1px solid #e8e8e8;
+			}
+			.profile-image-1-personal-left-fixed::after {
+				background: linear-gradient(0deg, rgb(255 255 255) 0%, rgba(0, 0, 0, 0) 100%);
+				z-index: 0;
+			}
+			.profile-image-1-personal-left-fixed .social-default li a {
+				background-color: #ffffff;
+				i{
+					color: var(--color-primary);
+				}
+				&:hover{
+					i{
+						color: #fff;
+					}
+				}
+			}
+			.copyright-style-net .copyright-center ul li a{
+				background: var(--color-primary);
+			}
+			
+		}
+		.banner-twelve-area.with-bg-image .banner-one-main-wrapper .inner .title{
+			color: #fff;
+		}
+		.banner-twelve-area.with-bg-image .social-share-style-1 a{
+			background: #fff;
+			box-shadow: none;
+		}
+
+		.banner-twelve-area.with-bg-image {
+			background-image: url(../images/bg/02.webp) !important;
+		}
+		.header-left-sticky .inner-wrapper::after {
+			background: transparent;
+		}
+		.for-animation-inner {
+			background-image: none;
+		}
+		.tmp-btn.tmp-modern-button:hover {
+			background: var(--icon-gradient);
+		}
+		.tmp-btn.tmp-modern-button:hover .btn-bg-hover {
+			opacity: 0;
+		}
+		.tmp-btn.tmp-modern-button:hover .btn-bg {
+			opacity: 0;
+		}
+	
+		.section-head .pre-title::before {
+			background: radial-gradient(92.46% 222.14% at 15.65% -7.58%, rgba(127, 226, 251, 1) 0%, rgba(127, 226, 251, 1) 100%) border-box;
+		}
+		
+		.tmp-portfolio-single-card {
+			background: var(--color-border);
+		}
+		.tmp-btn.tmp-modern-button .btn-bg {
+			display: none;
+		}
+		.tmp-btn.tmp-modern-button {
+			border: 2px solid var(--color-border);
+		}
+		.tmp-btn.tmp-modern-button:hover {
+			border-color: var(--color-primary);
+		}
+		.tmp-btn.tmp-modern-button .btn-hack::after {
+			background: conic-gradient(from 148deg, transparent 46%, #333333 50%, transparent 54%);
+		}
+
+		.profile-image-1-personal-left-fixed .title {
+			color: #ffffff;
+		}
+
+		.tmponhover::after {
+			display: none;
+		}
+
+
+
+		.tmponhover,
+		.tmp-contact-about-inner,
+		.tab-navigation-button,
+		.for-animation-inner,
+		.progress-charts .progress,
+		.about-us-left-content-wrap .years-of-experience-card,
+		.about-us-left-content-wrap .design-card,
+		.social-link a,
+		.tmp-intro-video-card-wrapper,
+		.tmp-iv-close-button ,
+		.my-skill-card .card-icon::after ,
+		.service-card-v1,
+		.client-testimonial-card-wrap,
+		.tmp-profile-card.services-card .services-item,
+		#tmp-page-content-bento .profile-picture-area .info-box,
+		.tmp-profile-card .work-experiance-card .work-experiance-slider li,
+		.tmp-profile-card .expertise-card .expertise-item .image,
+		.experience-style-list .experience-list .resume-single-list,
+		.modal .modal-dialog .modal-content,
+		.modal .modal-dialog .modal-content .modal-header .close span::after,
+		.tmp-popup-mobile-menu .inner {
+			background: var(--gradient-white);
+		}
+
+		.tmponhover,
+		.tab-navigation-button .nav-item .nav-link,
+		.tmp-contact-form.contact-form-style-1,
+		.contact-info-box,
+		.blog-card-style-two,
+		.about-us-left-content-wrap .years-of-experience-card,
+		.about-us-left-content-wrap .design-card ,
+		.social-link a,
+		.tmp-intro-video-card-wrapper,
+		.tmp-iv-close-button,
+		.service-card-v1,
+		.latest-portfolio-tabs-area .nav .nav-link,
+		.client-testimonial-card-wrap,
+		.tmp-profile-card.services-card .services-item,
+		#tmp-page-content-bento .profile-picture-area .info-box,
+		.tmp-profile-card .expertise-card .expertise-item .image,
+		.experience-style-list .experience-list .resume-single-list,
+		.modal .modal-dialog .modal-content,
+		.modal .modal-dialog .modal-content .modal-header .close span::after {
+			box-shadow: var(--shadow-white);
+		}
+
+		.tmponhover,
+		.tmp-contact-about-inner,
+		.tab-navigation-button .nav-item .nav-link ,
+		.tmp-contact-form.contact-form-style-1,
+		.contact-info-box,
+		.service-card-v1,
+		.client-testimonial-card-wrap {
+			border: 0 none;
+		}
+
+
+		.tmp-profile-card.services-card .services-item .image img{
+			filter: brightness(0);
+		}
+
+		.latest-portfolio-tabs-area .nav .nav-link.active {
+			background: var(--color-primary) !important;
+			color: #ffffff;
+		}
+		.latest-portfolio-tabs-area .nav .nav-link::after {
+			display: none;
+		}
+		.tmp-swiper-pagination.tmp-swiper-pagination-01 .swiper-pagination-bullet {
+			box-shadow: inset 0 0 0 7px #eef1f4;
+		}
+		.tmp-swiper-pagination.tmp-swiper-pagination-01 .swiper-pagination-bullet.swiper-pagination-bullet-active {
+			box-shadow: inset 0 0 0 1px var(--color-primary);
+		}
+		.tmp-contact-form.contact-form-style-1.in-bentogrid {
+			box-shadow: none;
+		}
+		.tmp-profile-card.services-card .services-item .image {
+			background: transparent;
+		}
+		.skill-style-border-card img {
+			filter: brightness(0);
+		}
+		.modal {
+			background: #ffffff;
+		}
+
+		.modal .modal-dialog .modal-content .modal-header .close span svg ,
+		.modal .modal-dialog .modal-content .modal-header .close span {
+			color: var(--color-heading);
+		}
+
+
+		.progress {
+			background-color: #f9f9f9;
+		}
+
+		.tpm-custom-box-bg,
+		.get-in-touch-wrapper,
+		.experiences-wrapper .experiences-wrap-right-content {
+			box-shadow: var(--shadow-white);
+		}
+		.year-of-expariance-wrapper {
+			box-shadow: var(--shadow-white);
+		}
+		&.index-ten .tmp-contact-about-inner{
+			box-shadow: var(--shadow-white);
+		}
+		.profile-image-1-personal-left-fixed .inner-content{
+			background: #f4f4f4;
+			box-shadow: var(--shadow-white);
+			overflow: visible;
+		}
+		.profile-image-1-personal-left-fixed{
+			overflow: visible;
+		}
+		.page-with-left-header{
+			.get-in-touch-wrapper{
+				box-shadow: none;
+			}
+		}
+	}
+}
+.tmp-white-version{
+	.tmp-right-demo .demo-button::before {
+		content: "";
+		background: linear-gradient(-45deg, #ee7752, #ff004b, #ff004b, #d52323);
+		background-size: 400% 400%;
+		animation: gradient 4s ease infinite;
+		opacity: 1;
+		backdrop-filter: blur(21px);
+	}
+	.tmp-right-demo *{
+		color: #fff !important;
+	}
+	&.index-8 .tmp-contact-about-inner::after{
+		display: none !important;
+	}
+	&.video-bg-image-bg-green {
+		background-image: url(../images/bg/06.webp);
+	}
+	.tmp-profile-card .work-experiance-card .work-experiance-slider li .info .icon {
+		background-color: rgb(213 213 213 / 38%);
+	}
+	.experience-style-list .experience-list .resume-single-list:hover .inner .heading .title h4{
+		color: var(--color-heading);
+	}
+}
+
+.tmp-white-version{
+	.tmp-banner-one-area.style-3 .thumbnail-author img, .tmp-banner-one-area.style-4 .thumbnail-author img {
+		border: 25px solid #ebebeb;
+	}
+	// .scrollToTop {
+	// 	background-color: #f4f4f4;
+	// }
+	// .scrollToTop .arrowUp i {
+	// 	color: #141414;
+	// }
+}
+
+.index-ten{
+	.tmp-contact-about-inner{
+		flex-direction: column;
+	}
+	.tmp-contact-about-inner .thumbnail img{
+		@media #{$sm-layout} {
+			max-width: 100%;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.tmp-white-version{
+	.year-of-expariance-wrapper.bg-blur-style-one::after{
+		display: none;
+	}
+	.services-widget.v1 .my-skill-card .card-icon {
+		border: 2px solid #141414;
+	}
+	.color-primary-2nd .services-widget.v1 .my-skill-card .card-icon i {
+		color: var(--color-heading);
+	}
+	.about-us-left-content-wrap .design-card .design-card-img {
+		border: 2px solid var(--color-primary);
+	}
+	.color-primary-2nd  .services-widget.v2 .active-bg {
+		background: var(--color-primary);
+	}
+	.color-primary-2nd  .my-expertise-card-wrap .expertise-card-left .expertise-card-logo img {
+		filter: brightness(0) saturate(100%) !important;
+	}
+	.my-expertise-card-wrap .expertise-card-left .expertise-card-logo {
+		border: 2px solid #141414;
+	}
+	.rpp-banner-two-area::before {
+		display: none;
+	}
+	.rpp-banner-two-area::after {
+		display: none;
+	}
+	.banner-three-main-wrapper .bg-benner-img-three::before{
+		display: none;
+	}
+	.services-widget.v4 .active-bg {
+		background: rgb(253 196 72);
+	}
+	.tmp-banner-one-area.style-4 .galaxy {
+		opacity: 0.07;
+	}
+
+
+	
+}
+body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
+	background: rgb(255 193 7);
+}
+
+.demo-modal-area .wrapper .tmp-modal-inner .demo-top .subtitle{
+	color: #c2c2c2 !important;
+}
+.active-light.demo-modal-area .wrapper .tmp-modal-inner .demo-top .subtitle{
+	color: #3d3d3d !important;
+}

@@ -1,0 +1,157 @@
+:root {
+
+    // themes color
+    --color-page: #010A10;
+    --color-primary: #139bfd;
+    --color-primary-alt: #13fdfd;
+    --color-primary-2nd: #FF494A;
+    --color-primary-3rd: #FDC448;
+    --color-primary-4th: #0071ff;
+    --color-secondary: #010a10;
+    --color-white:#ffffff;
+    
+
+    --color-gray: #bebebe;
+    // --color-gray-2: #010e16;
+    --color-gray-2: #06131b;
+    --color-subtitle: #f9004d;
+    --stroke-dark-100: #081722;
+     
+    // background-color
+    --background-color-1: #24243557;
+    --background-color-2: #13131d;
+    --background-color-3: #151521;
+    --background-color-4: #242435;
+    --background-color-5: #EDF5FF;
+    --color-card-wrapper: #010a10;
+    --color-card: #06131b;
+
+    // color gradient
+    --gradient-box: linear-gradient(to right, var(--color-primary), #FF014F);
+    
+    --gradient-one: linear-gradient(to right bottom, #E42032, #1273EB);
+    --gradient-two: linear-gradient(to right, #ED145B, #4A11EB);
+    --gradient-three: linear-gradient(to right, #03041c, #0612b3);
+    --text-gradient-one:linear-gradient(to right, #E42032, #4A11EB);
+
+
+    --stroke-gr: linear-gradient(317deg, #13fdfd 0%, rgba(19, 215, 253, 0.2) 38.23%, rgba(19, 191, 253, 0.2) 62.96%, #139bfd 100%);
+    --stroke-gradient-2 : radial-gradient(92.46% 222.14% at 15.65% -7.58%, rgba(127, 226, 251, 0.20) 0%, rgba(127, 226, 251, 0.02) 100%);
+    
+    --icon-gradient: linear-gradient(315deg, #13fdfd 0%, #139bfd 100%);
+
+    --gradient-none: linear-gradient(red 0 0);
+    --full: linear-gradient(red 0 0);
+    --shadow-1 : 0 2px 22px #13fdfd7d;
+   --theme-gradient: linear-gradient(312deg, #13fdfd 0%, #139bfd 100%);
+
+
+    
+
+
+
+
+
+    // typo Color
+    --color-heading:#ffffff;
+    --color-body: #d6d6d6;
+    --color-dark:#1d1d1d;
+
+
+    // text extra color
+    --color-text-1:#DEDEDE;
+    --color-light-heading: #181c32;
+    --color-light-body: #65676b;
+    --color-border-white: #00000024;
+
+    // Gery Colors 
+    --color-midgray: #878787;
+    --color-light: #E4E6EA;
+    --color-lighter: #CED0D4;
+    --color-lightest: #F0F2F5;
+    --color-border: #0c1f2e;
+    --color-border-2: #ffffff80;
+    --color-border-3: #ffffff0f;
+    --color-white: #ffffff;
+    --color-white-75: rgba(255, 255, 255, 0.75);
+
+
+    // notify Colors
+    --color-success: #3EB75E;
+    --color-danger: #FF0003;
+    --color-warning: #FF8F3C;
+    --color-info: #1BA2DB;
+
+
+    //Social icon colors
+    --color-facebook: #3B5997;
+    --color-twitter: #1BA1F2;
+    --color-youtube: #ED4141;
+    --color-linkedin: #0077B5;
+    --color-pinterest: #E60022;
+    --color-instagram: #C231A1;
+    --color-vimeo: #00ADEF;
+    --color-twitch: #6441A3;
+    --color-discord: #7289da;
+
+    // Font Family
+    --font-primary: "Montserrat", serif;
+    --font-secondary:  "Poppins", serif;
+    --font-three: 'fontawesome';
+
+    // Font weight
+    --p-light: 300;
+    --p-regular: 400;
+    --p-medium: 500;
+    --p-semi-bold: 600;
+    --p-bold: 700;
+    --p-extra-bold: 800;
+    --p-black: 900;
+   
+    // Font weight
+    --s-light: 300;
+    --s-regular: 400;
+    --s-medium: 500;
+    --s-semi-bold: 600;
+    --s-bold: 700;
+    --s-extra-bold: 800;
+    --s-black: 900;
+
+    --border-width: 2px;
+    --radius: 4px;
+    
+
+    //transition easing
+    --transition: all 0.4s ease-in-out;
+
+    //Fonts Size
+    --font-size-b1: 16px;
+    --font-size-b2: 18px;
+    --font-size-b3: 22px;
+
+
+    //Line Height
+    --line-height-b1: 1.75;
+    --line-height-b2: 1.6;
+    --line-height-b3: 1.7;
+
+
+    // Heading Font
+    --h1: 60px;
+    --h2: 36px;
+    --h3: 27px;
+    --h4: 24px;
+    --h5: 20px;
+    --h6: 18px;
+
+}
+
+// Layouts Variation
+$smlg-device: 'only screen and (max-width: 1199px)';
+$extra-device: 'only screen and (min-width: 1600px) and (max-width: 1919px)';
+$laptop-device: 'only screen and (min-width: 1200px) and (max-width: 1599px)';
+$lg-layout: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md-layout:'only screen and (min-width: 768px) and (max-width: 991px)';
+$sm-layout:'only screen and (max-width: 767px)';
+$large-mobile: 'only screen and (max-width: 575px)';
+$small-mobile: 'only screen and (max-width: 479px)';    

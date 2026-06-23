@@ -1,0 +1,283 @@
+/*===============================
+  Header Top Inner
+  ===============================*/
+.header-top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-bottom: 60px;
+    @media #{$large-mobile} {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .section-head {
+        padding-bottom: 0;
+    }
+}
+
+/*===============================
+Section Head
+===============================*/
+.section-head {
+    text-align: center;
+    // padding-bottom: 60px;
+
+    .section-sm {
+        display: inline-flex;
+        max-width: 80%;
+        @media #{$large-mobile} {
+            max-width: 100%;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .section-sm {
+            max-width: 50%;
+        }
+    }
+
+    @media #{$lg-layout} {
+        .section-sm {
+            max-width: 70%;
+        }
+    }
+
+    @media #{$md-layout} {
+        .section-sm {
+            max-width: 90%;
+        }
+    }
+
+    @media #{$sm-layout} {
+        .section-sm {
+            max-width: 80%;
+        }
+    }
+
+    @media #{$large-mobile} {
+        .section-sm {
+            max-width: 100%;
+        }
+    }
+
+    &.pb-40 {
+        padding-bottom: 40px;
+    }
+
+    &.pb-0 {
+        padding-bottom: 0;
+    }
+
+    &.text-align-left {
+        text-align: left;
+    }
+
+    &.section-head-one-side {
+        padding-bottom: 22px;
+    }
+
+    .section-sub-title {
+        font-size: 16px;
+        font-weight: var(--s-bold);
+        color: var(--color-primary);
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        font-family: var(--font-secondary);
+        display: flex;
+        align-items: center;
+        gap: 7px;
+
+        &.color-white {
+            color: var(--color-heading);
+        }
+
+        img {
+            margin-right: 8px;
+        }
+
+        span {
+            &.subtitle {
+                font-family: var(--font-secondary);
+            }
+        }
+    }
+
+    .title {
+        color: var(--color-heading);
+        font-family: var(--font-primary);
+        font-weight: 700;
+        margin-bottom: 0;
+        @media #{$sm-layout} {
+            br {
+                display: none;
+            }
+        }
+
+        @media #{$large-mobile} {
+            font-size: 28px;
+            line-height: 1.4;
+
+            br {
+                display: none;
+            }
+        }
+
+        @media #{$small-mobile} {
+            font-size: 22px;
+        }
+
+        &.color-white {
+            color: var(--color-heading);
+        }
+    }
+
+    .description {
+        margin-top: 10px;
+        color: var(--color-gray);
+        font-family: var(--font-secondary);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        br {
+            @media #{$sm-layout} {
+                display: none;
+            }
+        }
+    }
+}
+
+/*===============================
+  Section Head Color White
+  ===============================*/
+.section-head.color-white {
+    text-align: center;
+    padding-bottom: 60px;
+
+    .section-sub-title {
+        font-size: 16px;
+        font-weight: var(--s-bold);
+        color: var(--color-primary);
+        text-transform: uppercase;
+
+        span.subtitle {
+            margin-left: 8px;
+            font-family: var(--font-secondary);
+        }
+    }
+
+    .title {
+        @media #{$large-mobile} {
+            font-size: 22px;
+            line-height: 34px;
+        }
+    }
+}
+
+/*===============================
+  Section Head
+  ===============================*/
+.section-head {
+    &.pb--30 {
+        padding-bottom: 30px;
+    }
+    .pre-title {
+        border-radius: 0.5rem;
+        padding: 6px 14px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        width: max-content;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        color: var(--color-body);
+        font-weight: 500;
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0px;
+            border-radius: inherit;
+            border: 1px solid transparent;
+            background-clip: border-box;
+            pointer-events: none;
+            background: var(--stroke-gradient-2) border-box;
+            z-index: 1;
+            -webkit-mask: var(--gradient-none) padding-box, var(--gradient-none);
+            -webkit-mask-composite: xor;
+            mask: var(--gradient-none) padding-box exclude, var(--gradient-none);
+        }
+    }
+    .subtitle {
+        font-weight: var(--s-bold);
+        font-family: var(--font-primary);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        &.color-gradiant {
+            background: var(--text-gradient-one);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+/*===============================
+  Section Head
+  ===============================*/
+.section-head {
+    .section-sub-title {
+        &.center-title {
+            justify-content: center;
+        }
+    }
+}
+
+/*===============================
+  Custom Title
+  ===============================*/
+.custom-title {
+    color: var(--color-heading);
+    font-family: var(--font-primary);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 42px;
+    text-transform: capitalize;
+    position: relative;
+    &.mb-32 {
+        margin-bottom: 32px;
+    }
+    span {
+        margin-left: 20px;
+        img {
+            opacity: 0.3;
+        }
+    }
+}
+
+/*===============================
+  Discription Area
+  ===============================*/
+.discription-area {
+    max-width: 400px;
+    @media #{$md-layout} {
+        max-width: 80%;
+    }
+    @media #{$sm-layout} {
+        max-width: 100%;
+    }
+    .description {
+        color: var(--color-gray);
+        font-family: var(--font-secondary);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        span {
+            color: var(--color-primary);
+        }
+    }
+}

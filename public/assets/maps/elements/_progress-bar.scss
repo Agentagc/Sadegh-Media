@@ -1,0 +1,168 @@
+
+
+.rts-progress-area .thumbnail {
+    display: block;
+    overflow: hidden;
+    max-width: max-content;
+}
+
+.rts-progress-area .thumbnail img {
+    transition: 0.3s;
+}
+
+.rts-progress-area .thumbnail:hover img {
+    transform: scale(0.95);
+}
+
+.single-progress-area-h4 {
+    margin-top: 30px;
+}
+
+.single-progress-area-h4:first-child {
+    margin-top: 0;
+}
+
+.single-progress-area-h4 .page-wrapper {
+    width: calc(100% - 100px);
+    margin: 100px auto 200px;
+}
+
+.single-progress-area-h4 .progress {
+    height: 5px;
+    position: relative;
+    margin-top: 14px;
+    border-radius: 0;
+}
+
+.single-progress-area-h4 .progress .bg--primary {
+    background: red;
+    border-radius: 0;
+}
+
+.single-progress-area-h4 .progress .progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.single-progress-area-h4 .progress .progress-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.single-progress-area-h4 .progress .progress-top p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #ffffff;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+
+.single-progress-area-h4 .progress .progress-top span.parcent {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+}
+
+/* circle progress */
+
+svg.radial-progress {
+    height: auto;
+    max-width: 100px;
+    border-radius: 50%;
+    border: 1px solid rgb(219 219 219 / 14%);
+    transform: rotate(-90deg);
+    width: 100%;
+    background-image: none;
+    transition: 0.3s;
+}
+
+svg.radial-progress circle {
+    fill: transparent;
+    stroke: #fff;
+}
+
+svg.radial-progress circle.bar-static {
+    stroke: rgb(186 186 186) !important;
+    stroke-width: 2px;
+    transition: 0.3s;
+}
+
+svg.radial-progress circle.bar--animated {
+    stroke-dasharray: 219.91148575129;
+    stroke: var(--color-heading);
+    stroke-dashoffset: 219.91148575129;
+    stroke-width: 3px;
+    transition: 0.3s;
+    stroke-linecap: round;
+}
+
+svg.radial-progress text {
+    fill: #fafafa;
+    font-size: 16px;
+    font-weight: 700;
+    text-anchor: middle;
+    font-family: var(--font-primary);
+    transition: 0.3s;
+}
+
+svg.radial-progress:hover circle.bar-static {
+    stroke-width: 1px;
+}
+
+svg.radial-progress:hover circle.bar--animated {
+    stroke-width: 4px;
+}
+
+
+section.svg-container svg.radial-progress:nth-child(even) {
+    margin: 0 15px;
+}
+
+section.svg-container svg.radial-progress:nth-last-of-type(1) {
+    background: linear-gradient(260deg, #ff0300, #ffc900);
+}
+
+section.svg-container svg.radial-progress:nth-last-of-type(0) {
+    background-image: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
+}
+
+.devider {
+    font-size: 50px;
+    padding: 20px;
+    min-height: 11vh;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-225deg, #FF057C 0%, #FF057C 40%, #321575 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+.devider:nth-last-of-type(2) {
+    background-image: linear-gradient(260deg, #ff0300, #ffc900);
+}
+
+.single-progress-circle {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.single-progress-circle .small-text {
+    position: absolute;
+    top: 55%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1F1F21;
+    font-family: var(--font-primary);
+}

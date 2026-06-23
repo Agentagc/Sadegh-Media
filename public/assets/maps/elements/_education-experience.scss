@@ -1,0 +1,140 @@
+/*===============================
+  Education Experience Card
+  ===============================*/
+.education-experience-card {
+    border-radius: 20px;
+    background: var(--color-gray-2);
+    padding: 50px 40px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    @media #{$laptop-device} {
+        padding: 20px;
+    }
+    @media #{$large-mobile} {
+        padding: 20px;
+    }
+    @media #{$sm-layout} {
+        padding: 30px 20px;
+    }
+
+    .edu-sub-title {
+        color: var(--color-heading);
+        font-family: var(--font-secondary);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        margin-bottom: 5px;
+    }
+    .edu-title {
+        color: var(--color-heading);
+        font-family: var(--font-primary);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 28px;
+        margin-bottom: 0;
+    }
+    .edu-para {
+        color: var(--color-gray);
+        font-family: var(--font-secondary);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        margin-top: 18px;
+        margin-bottom: 0;
+        @media #{$sm-layout} {
+            margin-top: 8px;
+        }
+    }
+}
+/*===============================
+  Experiences Wrapper
+  ===============================*/
+.experiences-wrapper {
+    margin-top: 75px;
+
+    &.v2 {
+        .experiences-wrap-left-content {
+            padding-left: 40px;
+            @media #{$large-mobile} {
+                padding: 0 15px;
+            }
+        }
+    }
+
+    .experiences-wrap-left-content {
+        padding: 0 40px;
+        @media (min-width: 1200px) {
+            padding-right: 138px;
+            padding-left: 0;
+        }
+        @media #{$large-mobile} {
+            padding: 0 15px;
+        }
+
+        .experience-content {
+            margin-bottom: 50px;
+            @media #{$lg-layout} {
+                margin-bottom: 30px;
+            }
+            @media #{$md-layout} {
+                margin-bottom: 30px;
+            }
+            @media #{$sm-layout} {
+                margin-bottom: 30px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .ex-subtitle {
+                color: var(--color-primary);
+                font-family: var(--font-secondary);
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 28px;
+                margin-bottom: 0;
+            }
+            .ex-name {
+                color: var(--color-heading);
+                font-family: var(--font-primary);
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 30px;
+                margin-bottom: 0;
+                margin-top: 0px;
+            }
+            .ex-title {
+                color: var(--color-heading);
+                font-family: var(--font-primary);
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 27px;
+                margin-bottom: 0;
+                margin-top: 6px;
+            }
+            .ex-para {
+                color: var(--color-gray);
+                font-family: var(--font-secondary);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 30px;
+                margin-top: 16px;
+            }
+        }
+    }
+
+    .experiences-wrap-right-content {
+        overflow: hidden;
+        padding: 25px;
+        background: var(--color-gray-2);
+        border-radius: 28px;
+        @media #{$sm-layout} {
+            padding: 14px;
+        }
+        img {
+            width: 100%;
+            border-radius: 20px;
+        }
+    }
+}

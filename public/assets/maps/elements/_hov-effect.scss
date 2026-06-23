@@ -1,0 +1,135 @@
+// hover effect
+
+.tmp-light {
+    position: absolute !important;
+    content: "";
+    width: 200px;
+    height: 200px;
+    background: var(--color-primary);
+    border-radius: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(70px);
+    opacity: 0;
+    transition: 0.5s;
+    &.light-left {
+        left: -100px;
+        transform: inherit;
+    }
+    &.light-top-left {
+        left: -100px;
+        transform: inherit;
+        top: -100px;
+    }
+    &.light-center-center {
+        width: 400px;
+        height: 50px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &.active {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+.tmponhover {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--stroke-dark-100);
+    &::before{
+        content: '';
+        position: absolute;
+        inset: 0px;
+        border-radius: inherit;
+        border: 1px solid transparent;
+        background-clip: border-box;
+        -webkit-mask: var(--full) padding-box, var(--full);
+        -webkit-mask-composite: xor;
+        mask: var(--full) padding-box exclude, var(--full);
+        pointer-events: none;
+        background: var(--stroke-gr) border-box;
+        z-index: 1;
+        transition: .5s;
+        transition: border-color .5s;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        will-change: opacity;
+        // background-size: 600% 600%;
+        // animation: gradient 3s ease infinite;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        inset: 2px;
+        background: var(--color-gray-2);
+        border-radius: 20px;
+    }
+    & > *{
+        z-index: 2;
+        position: relative;
+    }
+    &:hover,
+    &.active {
+        border-color: transparent;
+        &::before{
+            opacity: 1;
+        }
+
+        .tmp-light {
+            opacity: 1;
+        }
+    }
+}
+
+
+
+
+
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.tmp-light-hover {
+    .tmp-light {
+        position: absolute;
+        width: 938px;
+        height: 938px;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 100%;
+        background: -o-linear-gradient(315deg, var(--color-primary) 46.07%, rgba(53, 52, 124, 0) 91.91%);
+        background: linear-gradient(135deg, var(--color-primary) 46.07%, rgba(53, 52, 124, 0) 91.91%);
+        -webkit-filter: blur(150px);
+        filter: blur(150px);
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    &:hover {
+        .tmp-light {
+            opacity: 0.5;
+        }
+    }
+}
+

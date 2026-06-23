@@ -1,0 +1,188 @@
+/*===============================
+  My Skill Card Wrapper
+  ===============================*/
+.my-skill-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 43px 20px 32px 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    border-width: 2px;
+
+
+    @media (min-width: 992px) {
+        justify-content: space-between;
+        flex-direction: inherit;
+    }
+
+    .card-icon {
+        color: var(--color-body);
+        font-size: 34px;
+        font-weight: 600;
+        transition: all 0.4s ease;
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        box-shadow: var(--shadow-1);
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(1turn, var(--color-primary), var(--color-primary-alt));
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            transition: .5s, top 0s, left 0s;
+            border-radius: 50%;
+            z-index: -1;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 2px;
+            background: var(--color-card);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        img {
+            max-height: 32px;
+            filter: invert(1);
+        }
+    }
+
+    .main-title {
+        color: var(--color-heading);
+        font-family: var(--font-primary);
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 42px;
+        text-transform: capitalize;
+        margin-bottom: 0;
+        @media #{$lg-layout} {
+            font-size: 17px;
+            line-height: 1.2;
+        }
+    }
+
+    .sub-title {
+        color: var(--color-heading);
+        font-family: var(--font-primary);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        text-align: center;
+
+        @media (min-width: 900px) {
+            text-align: start;
+        }
+    }
+
+    .card-para {
+        max-width: 452px;
+        margin-bottom: 0;
+        color: var(--color-gray);
+        font-family: var(--font-secondary);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: center;
+        transition: all 0.4s ease;
+
+        @media (min-width: 900px) {
+            text-align: start;
+        }
+    }
+
+    .read-more-btn {
+        &:hover {
+            color: var(--color-heading);
+        }
+    }
+}
+
+
+
+
+/*=========================
+  My Skill Card Style Two
+  =========================*/
+.my-skill-area-style-two {
+    .my-skill-area-left-content-wrap {
+        position: sticky;
+        top: 100px;
+
+        @media (min-width: 576px) {
+            padding-right: 100px;
+        }
+
+        @media #{$md-layout} {
+            padding-right: 0;
+        }
+        @media #{$sm-layout} {
+            padding-right: 0;
+        }
+
+    }
+}
+
+/*===============================
+  My Skill Card Style Two
+  ===============================*/
+.my-skill-card-style-two {
+    .my-skill-card {
+        padding: 40px;
+        position: relative;
+        flex-direction: column;
+        border-width: 2px;
+        @media (min-width: 900px) {
+            align-items: flex-start;
+        }
+        @media #{$sm-layout} {
+            padding: 40px 15px;
+        }
+        // &::before {
+        //     content: " ";
+        //     position: absolute;
+        //     left: 0;
+        //     top: 0;
+        //     border: 2px solid var(--color-border);
+        //     width: 100%;
+        //     height: 100%;
+        //     border-radius: 20px;
+        // }
+
+        .card-title {
+            color: var(--color-heading);
+            font-family: var(--font-primary);
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 30px;
+            margin-top: 19px;
+            margin-bottom: 0;
+
+        }
+
+        .card-para {
+            color: var(--color-gray);
+            font-family: var(--font-secondary);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            margin-top: 21px;
+        }
+    }
+
+
+}
+
+.border--radious-20{
+    border-radius: 20px !important;
+}

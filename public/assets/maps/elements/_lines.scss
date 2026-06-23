@@ -1,0 +1,120 @@
+.lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    margin: auto;
+    width: 100vw;
+    pointer-events: none;
+  }
+  
+  .line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+  .line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 15vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      #fff 75%,
+      #fff 100%
+    );
+    -webkit-animation: drop 7s linear infinite;
+    animation: drop 7s linear infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  }
+  .line:nth-child(1) {
+    margin-left: -40%;
+  }
+  .line:nth-child(1)::after {
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+  }
+  .line:nth-child(2) {
+    margin-left: -8px;
+  }
+//   .line:nth-child(2)::after {
+//     -webkit-animation-delay: 1.5s;
+//     animation-delay: 1.5s;
+//   }
+  .line:nth-child(3) {
+    margin-left: 39%;
+  }
+  .line:nth-child(3)::after {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+  }
+  
+  @-webkit-keyframes drop {
+    0% {
+      top: -50%;
+    }
+    100% {
+      top: 110%;
+    }
+  }
+  
+  @keyframes drop {
+    0% {
+      top: -50%;
+    }
+    100% {
+      top: 110%;
+    }
+  }
+  
+
+  .separator-animated-border {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 0;
+    overflow: hidden;
+    height: 1px;
+    width: 75%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0) 0%, rgba(72, 139, 255, 0.357) 50%, rgba(0, 0, 0, 0) 100%);
+    &.animated-true::before {
+        content: "";
+        position: absolute;
+        width: 7%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0) 0%, var(--color-primary) 50%, rgba(0, 0, 0, 0) 100%);
+        backdrop-filter: blur(20px);
+        animation: separateline 4s ease-in-out infinite;
+    }
+    &.border-top-footer{
+        bottom: auto;
+        top: 0;
+        width: 100%;
+        &::before{
+            animation: separateline 10s ease-in-out infinite;
+        }
+    }
+    @keyframes separateline {
+        0% {
+            left: 0;
+        }
+    
+        100% {
+            left: 110%;
+        }
+    }
+    
+}

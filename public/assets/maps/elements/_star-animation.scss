@@ -1,0 +1,304 @@
+@use 'sass:math';
+@use 'sass:string';
+
+@function multiple-box-shadow($n) {
+  $value: '#{math.random(2000)}px #{math.random(2000)}px #FFF';
+
+  @for $i from 2 through $n {
+    $value: '#{$value}, #{math.random(2000)}px #{math.random(2000)}px #FFF';
+  }
+
+  @return string.unquote($value);
+}
+
+
+.banner-area-one-main-demo{
+    .slider-bg-light{
+        position: absolute;
+        left: 25%;
+        top: 0;
+        min-width: 300px;
+        z-index: -1;
+        @media #{$sm-layout} {
+            left: 10%;
+            min-width: none;
+        }
+        @media #{$small-mobile} {
+            left: 0%;
+        }
+        @media screen and (min-width: 2500px) {
+            left: 45%;
+            transform: translateX(-50%);
+        }
+    }
+    .slider-bg-dot-shape {
+        position: absolute;
+        left: 35%;
+        top: -28px;
+        z-index: -1;
+    }
+}
+
+
+
+
+$shadows-small: multiple-box-shadow(700);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-big: multiple-box-shadow(100);
+
+.blocksync-stars-area {
+    height: 600px;
+    overflow: hidden;
+    width: 300px;
+    @media #{$smlg-device} {
+        width: 100% !important;
+        min-width: 150px;
+    }
+}
+
+.blocksync-stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: $shadows-small;
+  animation: animStar 50s linear infinite;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $shadows-small;
+  }
+}
+
+.blocksync-stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: $shadows-medium;
+  animation: animStar 100s linear infinite;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $shadows-medium;
+  }
+}
+.blocksync-stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: $shadows-big;
+  animation: animStar 150s linear infinite;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: $shadows-big;
+  }
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+// banner two
+.tmp-banner-one-area.add-pattern{
+  position: relative;
+    .slider-bg-light{
+      position: absolute;
+      right: 3%;
+      top: 0;
+      min-width: 300px;
+      z-index: -1;
+      transform: scaleX(-1);
+      @media #{$sm-layout} {
+          right: 10%;
+          min-width: none;
+      }
+      @media #{$small-mobile} {
+          right: 5%;
+      }
+      @media screen and (min-width: 2500px) {
+          right: 10%;
+          transform: translateX(-50%);
+      }
+    }
+    .slider-bg-dot-shape {
+        position: absolute;
+        right: 10%;
+        top: -28px;
+        z-index: -1;
+    }
+}
+
+.rpp-banner-two-area{
+    position: relative;
+    .slider-bg-light{
+      position: absolute;
+      right: 3%;
+      top: 0;
+      min-width: 300px;
+      z-index: -1;
+      transform: scaleX(-1);
+      @media #{$sm-layout} {
+          right: 10%;
+          min-width: none;
+      }
+      @media #{$small-mobile} {
+          right: 5%;
+      }
+      @media screen and (min-width: 2500px) {
+          right: 10%;
+          transform: translateX(-50%);
+      }
+    }
+    .slider-bg-dot-shape {
+        position: absolute;
+        right: 10%;
+        top: -28px;
+        z-index: -1;
+    }
+}
+.banner-with-stars-10{
+    position: relative;
+    z-index: 1;
+    .slider-bg-light{
+      position: absolute;
+      right: -7%;
+      top: 0;
+      min-width: 300px;
+      z-index: -1;
+      transform: scaleX(-1);
+      @media #{$sm-layout} {
+          right: 0%;
+          min-width: none;
+      }
+      @media #{$small-mobile} {
+          right: 0%;
+      }
+      @media screen and (min-width: 2500px) {
+          right: 0%;
+          transform: translateX(-50%);
+      }
+    }
+    .slider-bg-dot-shape {
+        position: absolute;
+        right: 0%;
+        top: -28px;
+        z-index: -1;
+    }
+}
+
+.breadcrumb-top-stars-wrapper{
+    position: relative;
+    .slider-bg-light{
+      position: absolute;
+      right: 3%;
+      top: 0;
+      min-width: 300px;
+      z-index: 10;
+      transform: scaleX(-1);
+      pointer-events: none;
+      @media #{$sm-layout} {
+          right: 10%;
+          min-width: none;
+      }
+      @media #{$small-mobile} {
+          right: 5%;
+      }
+      @media screen and (min-width: 2500px) {
+          right: 10%;
+          transform: translateX(-50%);
+      }
+    }
+    .slider-bg-dot-shape {
+        position: absolute;
+        right: 10%;
+        top: -28px;
+        z-index: 10;
+        pointer-events: none;
+    }
+}
+
+.footer-stars-animation-wrapper-footer{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    .slider-bg-light{
+      position: absolute;
+      right: 0%;
+      top: 0;
+      min-width: 300px;
+      z-index: 1;
+      transform: scaleX(-1);
+      pointer-events: none;
+      @media #{$sm-layout} {
+          right: 0%;
+          min-width: none;
+      }
+      @media #{$small-mobile} {
+          right: 0%;
+      }
+      @media screen and (min-width: 2500px) {
+          right: 0%;
+          transform: translateX(-50%);
+      }
+    }
+    .slider-bg-dot-shape {
+        position: absolute;
+        right: 10%;
+        top: -28px;
+        z-index: 1;
+        pointer-events: none;
+    }
+}
+
+.footer-stars-animation-wrapper-footer-two{
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      .slider-bg-light{
+        position: absolute;
+        left: 0%;
+        top: 0;
+        min-width: 300px;
+        z-index: 1;
+        // transform: scaleX(-1);
+        pointer-events: none;
+        @media #{$sm-layout} {
+            left: 0%;
+            min-width: none;
+        }
+        @media #{$small-mobile} {
+            left: 0%;
+        }
+        @media screen and (min-width: 2500px) {
+            left: 0%;
+            transform: translateX(-50%);
+        }
+      }
+      .slider-bg-dot-shape {
+          position: absolute;
+          left: 15%;
+          top: -28px;
+          z-index: 1;
+          pointer-events: none;
+      }
+}

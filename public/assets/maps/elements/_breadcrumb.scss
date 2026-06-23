@@ -1,0 +1,50 @@
+.breadcrumb-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../../assets/images/breadcrumb/breadcum-bg.png");
+}
+.breadcrumb-area{
+    padding-top: 150px;
+    padding-bottom: 70px;
+    @media #{$md-layout} {
+        padding-top: 100px;
+        padding-bottom: 48px;
+    }
+    @media #{$sm-layout} {
+        padding-top: 100px;
+        padding-bottom: 48px;
+    }
+}
+
+.breadcrumb-inner {
+    margin: 0 auto;
+    .title {
+        color: var(--color-heading);
+        margin-bottom: 5px;
+        font-size: 40px;
+        @media #{$large-mobile} {
+            font-size: 32px;
+        }
+    }
+    .page-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li {
+            color: var(--color-gray);
+            font-family: var(--font-secondary);
+            &.icon {
+                padding: 0 10px;
+            }
+            &.active {
+                color: var(--color-primary);
+            }
+        }
+    } 
+    &:hover{
+        a{
+            color: var(--color-primary);
+        }
+    }
+}

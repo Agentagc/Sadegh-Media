@@ -1,0 +1,209 @@
+// back to top style scss
+.progress-wrap {
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	height: 46px;
+	width: 46px;
+	cursor: pointer;
+	display: block;
+	border-radius: 50px;
+	z-index: 10000;
+	opacity: 1;
+	visibility: hidden;
+	transform: translateY(15px);
+	-webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+
+}
+.progress-wrap.active-progress {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+.progress-wrap::after {
+	position: absolute;
+	font-family: var(--font-three);
+	content: '\f062';
+	text-align: center;
+	line-height: 46px;
+	font-size: 16px;
+	color: var(--color-primary);
+	left: 0;
+	top: 0;
+	height: 46px;
+	width: 46px;
+	cursor: pointer;
+	display: block;
+	z-index: 1;
+	-webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+    border: 0px solid var(--color-primary);
+    box-shadow: none;
+	border-radius: 50% !important;
+	border-radius: 5px;
+    font-weight: 300;
+}
+.progress-wrap:hover::after {
+	opacity: 1;
+    content: '\f062';
+    border: 0px solid var(--color-primary);
+    font-weight: 300;
+}
+.progress-wrap::before {
+	position: absolute;
+	font-family: var(--font-three);
+	content: '\f062';
+	text-align: center;
+	line-height: 46px;
+	font-size: 16px;
+	opacity: 0;
+	background: var(--color-primary);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	left: 0;
+	top: 0;
+	height: 46px;
+	width: 46px;
+	cursor: pointer;
+	display: block;
+	z-index: 2;
+	-webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+    font-weight: 300;
+}
+.progress-wrap:hover::before {
+	opacity: 0;
+}
+.progress-wrap svg path { 
+	fill: none; 
+}
+.progress-wrap svg { 
+    color: var(--color-primary);
+	border-radius: 50%;
+	background: #fff;
+}
+.progress-wrap svg.progress-circle path {
+    stroke: var(--color-primary);
+    stroke-width: 0px;
+	box-sizing:border-box;
+	-webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+    padding: 2px;
+}
+
+
+
+.home-blue{
+	.progress-wrap svg.progress-circle path{
+		stroke: var(--color-primary-2);
+	}
+	.progress-wrap::after{
+		border-color: var(--color-primary-2);
+		box-shadow: 0px 3px 20px 6px #0742e952;
+		color: var(--color-primary-2);
+	}
+}
+
+
+/*===============================
+  Scroll To Top
+  ===============================*/
+  .scrollToTop {
+    display: none !important;
+    height: 55px;
+    width: 55px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #0f0f0f;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 999;
+    transition: 0.5s ease all;
+    @media #{$large-mobile} {
+        height: 40px;
+        width: 40px;    
+    }
+}
+
+.scrollToTop.active-progress{
+	display: block !important;
+}
+
+.scrollToTop:hover {
+    transform: translateY(-15%);
+}
+
+.scrollToTop .arrowUp {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.scrollToTop .arrowUp i {
+    font-size: 19px;
+}
+
+.scrollToTop .water {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    background-color: var(--color-primary);
+
+    transition: all 0.3s;
+    svg symbol{
+        path{
+            fill: var(--color-primary) !important;
+        }
+    }
+}
+symbol{
+    path{
+        fill: var(--color-primary) !important;
+    }
+}
+
+.scrollToTop .water_wave {
+    width: 200%;
+    position: absolute;
+    bottom: 100%;
+}
+
+.scrollToTop .water_wave_back {
+    right: 0;
+    fill: var(--color-heading);
+    animation: wave-back 1.4s infinite linear;
+}
+
+.scrollToTop .water_wave_front {
+    left: 0;
+    fill: #7A259EE0;
+    margin-bottom: -1px;
+    animation: wave-front 0.7s infinite linear;
+}
+
+@keyframes wave-front {
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes wave-back {
+    100% {
+        transform: translateX(50%);
+    }
+}

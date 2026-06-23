@@ -1,0 +1,43 @@
+.our-supported-company-area{
+    border-radius: 30px;
+    .row{
+        --bs-gutter-x: 0;
+        --bs-gutter-y: 0;
+        border-left: 2px solid var(--color-border);
+        border-top: 2px solid var(--color-border);
+    }
+}
+.support-company-logo{
+    border-right: 2px solid var(--color-border);
+    padding: 40px 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-bottom: 2px solid var(--color-border);
+    @media #{$lg-layout} {
+        padding: 50px 0;
+    }
+    @media #{$md-layout} {
+        padding: 50px 0;
+    }
+    @media #{$sm-layout} {
+        padding: 24px 0;
+    }
+    @media #{$large-mobile} {
+        padding: 24px 0;
+    }
+    img {
+        @media #{$lg-layout} {
+            max-height: 44px;
+        }
+        @media #{$md-layout} {
+            max-height: 44px;
+        }
+        @media #{$sm-layout} {
+            max-height: 44px;
+        }
+    }
+}

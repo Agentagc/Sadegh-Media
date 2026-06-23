@@ -1,0 +1,141 @@
+/*---------------------------
+ CSS Index  
+****************************
+
+01. Variables
+02. Typography
+03. Spacing
+04. Reset
+05. Forms
+06. Shortcode
+07. Common
+08. Animations
+09. Text Animation
+10. Sal
+11. extend
+12. header-one
+13. nav
+14. mobile-menu
+15. side-collups
+15. side-collups
+16.banner';
+17.section-title';
+18.services';
+19.social';
+20.button';
+21.blog';
+22.faq';
+23.product';
+24.team';
+25testimonial';
+26.banner';
+27testimonial-swiper';
+28.error';
+30.brand';
+31.progress-bar';
+32.icons-style';
+33.portfolio';
+34.pricing';
+35.counter';
+36.rating';
+37.work';
+38.taglist';
+39contact';
+40.tab';
+41.skills';
+42.quick-action';
+43.breadcrumb';
+44.team-details';
+45.ack-to-top';
+46.video';
+47.pagination';
+48.blog-details';
+49.pre-loader';
+50.about';
+51.projects-details';
+52.footers';
+----------------------------*/
+
+
+
+/*----Default Css----*/
+
+@import'default/variables';
+@import'default/mixins';
+@import'default/extend';
+@import'default/typography';
+@import'default/reset';
+@import'default/spacing';
+@import'default/forms';
+@import'default/shortcode';
+@import'default/common';
+@import'default/animations';
+/* @import'default/text-animation'; */
+@import'default/sal';
+
+
+/*----Headers Style----*/
+@import'header/header';
+@import'header/nav';
+@import'header/left-header';
+@import'header/popupmenu';
+@import'header/offcanvance';
+
+
+
+/*----Elements Style // @import'elements/button'; ----*/
+@import'elements/animation-custom';
+@import'elements/banner';
+@import'elements/section-title';
+@import'elements/social';
+@import'elements/tmpbutton';
+@import'elements/blog';
+@import'elements/testimonial';
+@import'elements/banner';
+@import'elements/testimonial-swiper';
+@import'elements/error';
+@import'elements/pricing';
+@import'elements/contact';
+@import'elements/breadcrumb';
+@import'elements/back-to-top';
+@import'elements/pre-loader';
+@import'elements/year-of-expariance';
+@import'elements/education-experience';
+@import'elements/latest-portfolio';
+@import'elements/my-skill';
+@import'elements/about-us';
+@import'elements/my-expertise';
+@import'elements/services';
+@import'elements/our-supported-company-area';
+@import'elements/progress-bar';
+@import'elements/resume';
+@import'elements/chatbox';
+@import'elements/progress';
+@import'elements/text-anim';
+@import'elements/left-sticky-personal';
+@import'elements/experience';
+@import'elements/portfolio';
+@import'elements/hov-effect.scss';
+@import'elements/demo';
+@import'elements/lines';
+@import'elements/intro-video';
+@import'elements/star-animation';
+
+
+/*----Bentogrid Demos Css ----*/
+@import'bentogrid/header';
+@import'bentogrid/common';
+@import'bentogrid/profile';
+@import'bentogrid/experience';
+
+/*----Template Style----*/
+@import'template/about';
+@import'template/projects-details';
+@import'template/card';
+@import'template/modal';
+
+
+
+/*----Footer Style----*/
+@import'footer/footer';
+@import'template/color-theme';
