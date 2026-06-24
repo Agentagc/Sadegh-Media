@@ -239,7 +239,7 @@
         </div>
     </section>
     <!-- Tpm My Skill Area End -->
-    <!--    tmp sevices start-->
+    <!--    tmp services start-->
     <section class="resume-section tmp-section-gapTop" id="resume-section">
         <div class="container">
             <div class="row animation-action-3">
@@ -248,66 +248,26 @@
                         class="section-header mb--50 tmp-scroll-trigger tmp-fade-in animation-order-1"
                     >
                         <h2 class="section-title">
-                            <i class="fa-regular fa-award"></i>تجربه من
+                            <i class="fa-regular fa-award"></i>تولید محتوا
                         </h2>
                     </div>
                     <div class="resume-widget">
-                        <div class="paralax-image">
-                            <div
-                                class="resume-single tmponhover single-animation tmp-scroll-trigger tmp-fade-in animation-order-1"
-                            >
-                                <div class="time">
-                                    <i
-                                        class="fa-duotone fa-solid fa-circle-dot fa-fade mr--15"
-                                    ></i
-                                    >1399 - حاضر
+                        @foreach($rightServices as $service)
+                            <div class="paralax-image">
+                                <div
+                                    class="resume-single tmponhover single-animation tmp-scroll-trigger tmp-fade-in animation-order-1"
+                                >
+                                    <div class="time">
+                                        <i
+                                            class="fa-duotone fa-solid {{ $service->icon }} fa-fade mr--15"
+                                        ></i
+                                        >1399 - حاضر
+                                    </div>
+                                    <h3 class="resume-title">{{ $service->title }}</h3>
+                                    <div class="institute">{{ $service->short_description }}</div>
                                 </div>
-                                <h3 class="resume-title">توسعه دهنده ارشد</h3>
-                                <div class="institute">CodeGenius (ایالات متحده)</div>
                             </div>
-                        </div>
-                        <div class="paralax-image">
-                            <div
-                                class="resume-single tmponhover single-animation tmp-scroll-trigger tmp-fade-in animation-order-2"
-                            >
-                                <div class="time">
-                                    <i
-                                        class="fa-duotone fa-solid fa-circle-dot fa-fade mr--15"
-                                    ></i
-                                    >1399 - 1399
-                                </div>
-                                <h3 class="resume-title">توسعه دهنده وب</h3>
-                                <div class="institute">مودرنی تامولی</div>
-                            </div>
-                        </div>
-                        <div class="paralax-image">
-                            <div
-                                class="resume-single tmponhover single-animation tmp-scroll-trigger tmp-fade-in animation-order-3"
-                            >
-                                <div class="time">
-                                    <i
-                                        class="fa-duotone fa-solid fa-circle-dot fa-fade mr--15"
-                                    ></i
-                                    >1400 - 1399
-                                </div>
-                                <h3 class="resume-title">طراح</h3>
-                                <div class="institute">شرکت طراحی فنی</div>
-                            </div>
-                        </div>
-                        <div class="paralax-image">
-                            <div
-                                class="resume-single tmponhover single-animation mb--0 tmp-scroll-trigger tmp-fade-in animation-order-4"
-                            >
-                                <div class="time">
-                                    <i
-                                        class="fa-duotone fa-solid fa-circle-dot fa-fade mr--15"
-                                    ></i
-                                    >1397 - 1390
-                                </div>
-                                <h3 class="resume-title">طراح کارآموز UI/UX</h3>
-                                <div class="institute">شرکت وب ایالات متحده آمریکا</div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -315,72 +275,32 @@
                         class="section-header mb--50 tmp-scroll-trigger tmp-fade-in animation-order-1"
                     >
                         <h2 class="section-title">
-                            <i class="fa-regular fa-graduation-cap"></i>تحصیلات من
+                            <i class="fa-regular fa-graduation-cap"></i>توسعه هوش مصنوعی
                         </h2>
                     </div>
                     <div class="resume-widget">
-                        <div class="paralax-image">
-                            <div
-                                class="resume-single tmponhover single-animation tmp-scroll-trigger tmp-fade-in animation-order-1"
-                            >
-                                <div class="time">
-                                    <i
-                                        class="fa-duotone fa-solid fa-circle-dot fa-fade mr--15"
-                                    ></i
-                                    >1400 - 1402
+                        @foreach($leftServices as $service)
+                            <div class="paralax-image">
+                                <div
+                                    class="resume-single tmponhover single-animation tmp-scroll-trigger tmp-fade-in animation-order-1"
+                                >
+                                    <div class="time">
+                                        <i
+                                            class="fa-duotone fa-solid {{ $service->icon }} fa-fade mr--15"
+                                        ></i
+                                        >1400 - 1402
+                                    </div>
+                                    <h3 class="resume-title">{{ $service->title }}</h3>
+                                    <div class="institute">{{ $service->short_description }}</div>
                                 </div>
-                                <h3 class="resume-title">دوره برنامه نویسی</h3>
-                                <div class="institute">دانشگاه هاروارد</div>
                             </div>
-                        </div>
-                        <div class="paralax-image">
-                            <div
-                                class="resume-single tmponhover single-animation tmp-scroll-trigger tmp-fade-in animation-order-2"
-                            >
-                                <div class="time">
-                                    <i
-                                        class="fa-duotone fa-solid fa-circle-dot fa-fade mr--15"
-                                    ></i
-                                    >1397 - 1400
-                                </div>
-                                <h3 class="resume-title">دوره طراحی گرافیک</h3>
-                                <div class="institute">دانشگاه دانمارک</div>
-                            </div>
-                        </div>
-                        <div class="paralax-image">
-                            <div
-                                class="resume-single tmponhover single-animation tmp-scroll-trigger tmp-fade-in animation-order-3"
-                            >
-                                <div class="time">
-                                    <i
-                                        class="fa-duotone fa-solid fa-circle-dot fa-fade mr--15"
-                                    ></i
-                                    >1392 - 2015
-                                </div>
-                                <h3 class="resume-title">دوره طراحی وب</h3>
-                                <div class="institute">دانشگاه کالیفرنیا</div>
-                            </div>
-                        </div>
-                        <div class="paralax-image">
-                            <div
-                                class="resume-single tmponhover single-animation mb--0 tmp-scroll-trigger tmp-fade-in animation-order-4"
-                            >
-                                <div class="time">
-                                    <i
-                                        class="fa-duotone fa-solid fa-circle-dot fa-fade mr--15"
-                                    ></i
-                                    >1390 - 1398
-                                </div>
-                                <h3 class="resume-title">طراحی و فناوری</h3>
-                                <div class="institute">پارسونز ، مدرسه جدید</div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--    tmp sevices end-->
+    <!--    tmp services end-->
     <!-- Tpm Service Area Start -->
     <section class="service-area tmp-section-gap" id="service">
         <div class="container">
