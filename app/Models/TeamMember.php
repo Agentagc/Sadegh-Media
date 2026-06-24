@@ -10,7 +10,7 @@ class TeamMember extends Model
 {
     protected $guarded = [];
 
-    public function group(): BelongsTo
+    public function teamGroup(): BelongsTo
     {
         return $this->belongsTo(TeamGroup::class, 'team_group_id');
     }
