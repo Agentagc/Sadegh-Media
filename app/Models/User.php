@@ -29,4 +29,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function teamMember(): \Illuminate\Database\Eloquent\Relations\HasOne|User
+    {
+        return $this->hasOne(TeamMember::class);
+    }
 }
