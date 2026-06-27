@@ -14,8 +14,25 @@ use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 
+
+
 class SettingResource extends Resource
 {
+    protected const SYSTEM_KEYS = [
+        'site_title',
+        'hero_title',
+        'hero_description',
+        'hero_button_text',
+        'hero_button_url',
+        'hero_video',
+        'about_text',
+    ];
+
+    public static function isSystemSetting(?string $key): bool
+    {
+        return in_array($key, self::SYSTEM_KEYS, true);
+    }
+
     protected static ?string $model = Setting::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;

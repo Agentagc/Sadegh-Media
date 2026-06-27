@@ -7,18 +7,25 @@ use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Schema;
 use Filament\Forms\Components\Select;
 
+
+
+
 class SettingForm
 {
     public static function configure(Schema $schema): Schema
     {
         return $schema
             ->components([
+                TextInput::make('key')
+                    ->label('کلید')
+                    ->required()
+                    ->disabled(fn(?string $operation) => $operation === 'edit'),
                 Select::make('type')
                     ->label('نوع')
                     ->options([
                         'text' => 'متن کوتاه',
                         'textarea' => 'متن بلند',
-                        'richtext' => 'ویرایشگر پیشرفته',
+                        'rich_text' => 'ویرایشگر پیشرفته',
                         'number' => 'عدد',
                         'boolean' => 'بله / خیر',
                         'email' => 'ایمیل',
@@ -36,18 +43,8 @@ class SettingForm
                     ->native(false),
                 Textarea::make('value')
                     ->label('مقدار')
-                    ->rows(5)
+                    ->rows(6)
                     ->columnSpanFull(),
-                Select::make('type')
-                    ->label('نوع')
-                    ->options([
-                        'text' => 'متن کوتاه',
-                        'textarea' => 'متن بلند',
-                        'url' => 'لینک',
-                        'email' => 'ایمیل',
-                    ])
-                    ->default('text')
-                    ->required(),
             ]);
     }
 }

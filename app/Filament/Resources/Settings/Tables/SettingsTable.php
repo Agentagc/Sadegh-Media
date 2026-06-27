@@ -7,6 +7,7 @@ use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Filament\Actions\DeleteAction;
 
 class SettingsTable
 {
@@ -37,11 +38,20 @@ class SettingsTable
             ])
             ->recordActions([
                 EditAction::make(),
+
+                DeleteAction::make()
+                    ->visible(fn($record) => !\App\Filament\Resources\Settings\SettingResource::isSystemSetting($record->key)
+                    ),
             ])
             ->toolbarActions([
-                BulkActionGroup::make([
-
-                ]),
+                DeleteBulkAction::make()
+                    ->before(function ($records) {
+                        if ($records->contains(
+                            fn($record) => \App\Filament\Resources\Settings\SettingResource::isSystemSetting($record->key)
+                        )) {
+                            throw new \Exception('امکان حذف تنظیمات سیستمی وجود ندارد.');
+                        }
+                    }),
             ]);
     }
 }

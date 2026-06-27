@@ -37,12 +37,9 @@
     <div class="about-content-area">
         <div class="container tmp-section-gapTop">
             <div class="text-para-doc-wrap">
-                <h2 class="text-para-documents tmp-scroll-trigger tmp-fade-in tmp-title-split-2 animation-order-1">شخصی
-                    <span>نمونه کارها</span> مجموعه‌ای از کارهای شماست، یعنی
-                    AA به دستاوردها و مهارت‌هایی که برجسته می‌شوند بروید.
-                    <span>طراحی وب</span> در توانایی‌های شما و رشد حرفه‌ای، به عنوان یک خدمت شخصی برای نمونه‌کارها عمل
-                    می‌کند.
-                    <span>از سال 1391</span> این مجموعه، نمایانگر کارهای شماست.</h2>
+                <h2 class="text-para-documents tmp-scroll-trigger tmp-fade-in tmp-title-split-2 animation-order-1">
+                    {!! setting('about_text') !!}
+                </h2>
                 <div class="right-bg-text-para">
                     <img alt="" src="assets/images/banner/right-bg-text-para-doc.png"/>
                 </div>
