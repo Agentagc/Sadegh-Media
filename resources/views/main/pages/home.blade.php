@@ -9,8 +9,8 @@
                 <div class="row align-items-center">
                     <div class="col-lg-12">
                         <div class="inner banner-model-15">
-                            <h1 class="title tmp-fade-in">جولیان توبیاس</h1>
-                            <p class="disc tmp-fade-in">مربی بدنسازی ، کارآفرین و یوتیوبر آلمانی</p>
+                            <h1 class="title tmp-fade-in">{{ setting('site_title') }}</h1>
+                            <p class="disc tmp-fade-in">{{ setting('hero_title') }}</p>
                         </div>
                     </div>
                 </div>

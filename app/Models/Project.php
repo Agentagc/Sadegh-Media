@@ -9,7 +9,7 @@ class Project extends Model
 {
     protected $guarded = [];
 
-    public function member(): BelongsTo
+    public function teamMember(): BelongsTo
     {
         return $this->belongsTo(TeamMember::class, 'team_member_id');
     }
