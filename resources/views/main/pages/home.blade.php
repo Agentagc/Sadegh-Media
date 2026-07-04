@@ -1,5 +1,9 @@
 @extends("main.layouts.master")
 
+@php
+    use Illuminate\Support\Facades\Storage;
+@endphp
+
 
 @section('main')
     <!-- tmp banner area start -->
@@ -27,7 +31,8 @@
         </div>
         <div class="hero-bg-video">
             <video autoplay="" id="myVideo" loop="" muted="" class="hero-video">
-                <source src="assets/images/video/fitness.mp4" type="video/mp4">
+                <source src="{{ Storage::url(setting('hero_video')) }}" type="video/mp4">
+{{--                <source src="assets/images/video/fitness.mp4" type="video/mp4">--}}
                 <h1>test</h1>
             </video>
         </div>
