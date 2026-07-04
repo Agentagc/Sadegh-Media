@@ -35,9 +35,11 @@ class TeamMemberForm
                     ->columnSpanFull(),
                 FileUpload::make('avatar')
                     ->image()
+                    ->disk('public')
                     ->directory('team-members'),
                 FileUpload::make('cover_image')
                     ->image()
+                    ->disk('public')
                     ->directory('team-members'),
                 Toggle::make('is_active')
                     ->required(),

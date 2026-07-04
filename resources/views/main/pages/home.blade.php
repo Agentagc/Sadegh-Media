@@ -79,27 +79,12 @@
                         <div class="cfx-coverflow" data-cfx-stage>
 
                             <!-- ===== EXAMPLE STATIC CARDS — replace with your own loop/data ===== -->
-                            <div class="cfx-card"
-                                 data-img="https://codeyad.com/_ipx/f_webp&q_90/codeyad/assets/images/Courses/84252e91-93bf-4a57-9c93-23e40d985b56.webp"
-                                 data-sub="Landscape" data-title="Tidewatch"></div>
-                            <div class="cfx-card"
-                                 data-img="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&q=80"
-                                 data-sub="Abstract" data-title="Driftglass"></div>
-                            <div class="cfx-card"
-                                 data-img="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&q=80"
-                                 data-sub="Macro" data-title="Wild Petal"></div>
-                            <div class="cfx-card"
-                                 data-img="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&q=80"
-                                 data-sub="Featured" data-title="Moonrise"></div>
-                            <div class="cfx-card"
-                                 data-img="https://images.unsplash.com/photo-1480796927426-f609979314bd?w=600&q=80"
-                                 data-sub="Urban" data-title="Night City"></div>
-                            <div class="cfx-card"
-                                 data-img="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=600&q=80"
-                                 data-sub="Abstract" data-title="Aurora Sea"></div>
-                            <div class="cfx-card"
-                                 data-img="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&q=80"
-                                 data-sub="Botanical" data-title="Pale Bloom"></div>
+                            @foreach($teamMembers as $member)
+                                <div class="cfx-card"
+                                 data-img="{{ $member->avatar ? Storage::url($member->avatar) : asset('assets/images/default-avatar.png') }}"
+                                 data-sub="{{ $member->role_title }}" data-title="{{ $member->full_name }}"></div>
+                            @endforeach
+
                             <!-- ===== END EXAMPLE CARDS ===== -->
 
                         </div>
@@ -130,6 +115,7 @@
 
         </script>
     </div>
+    <!-- tmp Team Members End -->
     <!-- Tpm My Skill Area Start -->
     <section
         class="my-skill-area-style-two plr--120 plr_lg--30 plr_md--30 plr_sm--30 plr_mobile--15 mt--10"

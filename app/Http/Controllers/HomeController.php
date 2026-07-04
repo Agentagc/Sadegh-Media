@@ -7,6 +7,7 @@ use App\Models\Service;
 use App\Models\Stat;
 use App\Models\TeamGroup;
 use Illuminate\Http\Request;
+use App\Models\TeamMember;
 
 class HomeController extends Controller
 {
@@ -27,6 +28,11 @@ class HomeController extends Controller
         ->orderBy('sort_order')
         ->get();
 
+        $teamMembers = TeamMember::query()
+            ->where('is_active', true)
+            ->orderBy('full_name')
+            ->get();
+
         $projects = Project::query()
         ->where('is_featured', true)
         ->latest('published_at')
@@ -38,6 +44,7 @@ class HomeController extends Controller
             'stats',
             'teamGroups',
             'projects',
+            'teamMembers',
         ));
     }
 }
