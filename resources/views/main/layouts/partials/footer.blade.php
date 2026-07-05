@@ -22,17 +22,31 @@
                                 </a>
                             </div>
                             <p class="description">
-                                <span>آماده شدن</span> برای ایجاد عالی
+                                {!! setting('site_description') !!}
                             </p>
-                            <form
-                                action="index-15.html#"
-                                class="newsletter-form-1 mt--40"
-                            >
-                                <input placeholder="آدرس ایمیل" type="email" />
-                                <span class="form-icon"
-                                ><i class="fa-regular fa-envelope"></i
-                                    ></span>
-                            </form>
+{{--                            <form--}}
+{{--                                action="index-15.html#"--}}
+{{--                                class="newsletter-form-1 mt--40"--}}
+{{--                            >--}}
+{{--                                <input placeholder="آدرس ایمیل" type="email" />--}}
+{{--                                <span class="form-icon"--}}
+{{--                                ><i class="fa-regular fa-envelope"></i--}}
+{{--                                    ></span>--}}
+{{--                            </form>--}}
+                            <div class="social-link footer">
+                                <a href="index-15.html#"
+                                ><i class="fa-brands fa-instagram"></i
+                                    ></a>
+                                <a href="index-15.html#"
+                                ><i class="fa-brands fa-linkedin-in"></i
+                                    ></a>
+                                <a href="index-15.html#"
+                                ><i class="fa-brands fa-twitter"></i
+                                    ></a>
+                                <a href="index-15.html#"
+                                ><i class="fa-brands fa-facebook-f"></i
+                                    ></a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
@@ -64,33 +78,33 @@
                                 <li>
                       <span class="ft-icon"
                       ><i class="fa-solid fa-envelope"></i></span
-                      ><a href="index-15.html#">به عنوان مثال@gmail.com</a>
+                      ><a href="mailto:{{ setting('email') }}">{{ setting('contact_email') }}</a>
                                 </li>
                                 <li>
                       <span class="ft-icon"
                       ><i class="fa-solid fa-location-dot"></i></span
-                      >3891 Ranchview دکتر ریچاردسون
+                      >{{ setting('address') }}
                                 </li>
                                 <li>
                       <span class="ft-icon"
                       ><i class="fa-solid fa-phone"></i></span
-                      ><a href="index-15.html#">01245789321</a>
+                      ><a href="tel:{{ setting('phone') }}" style="unicode-bidi: plaintext; direction: ltr; white-space: nowrap; display: inline-block;">{{ setting('contact_phone') }}</a>
                                 </li>
                             </ul>
-                            <div class="social-link footer">
-                                <a href="index-15.html#"
-                                ><i class="fa-brands fa-instagram"></i
-                                    ></a>
-                                <a href="index-15.html#"
-                                ><i class="fa-brands fa-linkedin-in"></i
-                                    ></a>
-                                <a href="index-15.html#"
-                                ><i class="fa-brands fa-twitter"></i
-                                    ></a>
-                                <a href="index-15.html#"
-                                ><i class="fa-brands fa-facebook-f"></i
-                                    ></a>
-                            </div>
+{{--                            <div class="social-link footer">--}}
+{{--                                <a href="index-15.html#"--}}
+{{--                                ><i class="fa-brands fa-instagram"></i--}}
+{{--                                    ></a>--}}
+{{--                                <a href="index-15.html#"--}}
+{{--                                ><i class="fa-brands fa-linkedin-in"></i--}}
+{{--                                    ></a>--}}
+{{--                                <a href="index-15.html#"--}}
+{{--                                ><i class="fa-brands fa-twitter"></i--}}
+{{--                                    ></a>--}}
+{{--                                <a href="index-15.html#"--}}
+{{--                                ><i class="fa-brands fa-facebook-f"></i--}}
+{{--                                    ></a>--}}
+{{--                            </div>--}}
                         </div>
                     </div>
                 </div>
@@ -103,14 +117,13 @@
                 <div class="col-lg-12">
                     <div class="main-wrapper">
                         <p class="copy-right-para tmp-link-animation">
-                            ©<a href="#" target="_blank"> فرهام اقدسی </a>
+                            ©<a href="#" target="_blank"><a href="#" target="_blank"> {{ setting('site_title') }} </a></a>
                             <script>
                                 document.write(new Date().getFullYear());
                             </script>
                             | کلیه حقوق محفوظ است
                         </p>
                         <ul class="tmp-link-animation">
-                            <li><a href="index-15.html#">تراموا و وضعیت</a></li>
                             <li><a href="index-15.html#">سیاست حفظ حریم</a></li>
                             <li><a href="index-15.html#">با ما تماس بگیرید</a></li>
                         </ul>

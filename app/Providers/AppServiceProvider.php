@@ -4,7 +4,6 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Filament\Support\Facades\FilamentView;
-
 class AppServiceProvider extends ServiceProvider
 {
     /**

@@ -227,7 +227,7 @@
         </div>
     </section>
     <!-- Tpm My Skill Area End -->
-    <!--    tmp services start-->
+    <!--    tmp service Area start-->
     <section class="resume-section tmp-section-gapTop" id="resume-section">
         <div class="container">
             <div class="row animation-action-3">
@@ -288,9 +288,9 @@
             </div>
         </div>
     </section>
-    <!--    tmp services end-->
-    <!-- Tpm Service Area Start -->
-    <section class="service-area tmp-section-gap" id="service">
+    <!--    tmp service Area end-->
+    <!-- Tpm Stats Area Start -->
+    <section class="service-area tmp-section-gap" id="service"  >
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-3 col-md-4 col-sm-6">
@@ -360,8 +360,7 @@
             </div>
         </div>
     </section>
-    <!-- Tpm Service Area End -->
-    <!-- Tpm Counter Area Start -->
+
     <section class="counter-area">
         <div class="container">
             <div class="row g-5 animation-action-3">
@@ -435,7 +434,7 @@
             </div>
         </div>
     </section>
-    <!-- Tpm Counter Area End -->
+    <!-- Tpm Stats Area End -->
 
 
 
