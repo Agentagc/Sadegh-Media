@@ -24,7 +24,7 @@
 
     @yield('member')
 
-    @include("main.layouts.partials.footer")
+    @include("members.layouts.partials.footer")
     <script src="{{asset("assets/js/vendor/modernizer.js")}}"></script>
     <script src="{{asset("assets/js/vendor/jquery.js")}}"></script>
     <script src="{{asset("assets/js/vendor/jquery-ui.min.js")}}"></script>

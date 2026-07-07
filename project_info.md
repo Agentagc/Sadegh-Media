@@ -61,7 +61,7 @@ Without it, Filament uses the default disk (local/private) and files get 403.
 | about_description | textarea | (available) |
 | about_text | textarea (HTML) | Homepage about section — rendered with {!! !!} |
 | contact_email | email | Footer + contact section |
-| contact_phone | phone | Footer + contact section |
+| contact_phone | phone | Footer + contact section (dir=ltr, unicode-bidi) |
 | address | text | Footer + contact section |
 | instagram | url | Social links |
 | telegram | url | Social links |
@@ -70,15 +70,24 @@ Without it, Filament uses the default disk (local/private) and files get 403.
 
 ### Models
 - `Setting` — key/type/value, cache invalidation
-- `TeamMember` — full_name, slug, role_title, bio, avatar, cover_image, is_active, belongs to TeamGroup, User; has many Projects
+- `TeamMember` — full_name, slug, role_title, bio, avatar, cover_image, is_active
+  - belongs to: TeamGroup, User
+  - has many: Projects, MemberRole, MemberAbility, MemberSkill
+- `MemberRole` — title, sort_order, belongs to TeamMember
+- `MemberAbility` — title, percentage, sort_order, belongs to TeamMember
+- `MemberSkill` — title, icon (disk:public), percentage, sort_order, belongs to TeamMember
 - `TeamGroup` — has many TeamMembers
 - `Service` — title, short_description, icon, is_active, sort_order
 - `Stat` — key, title, value, icon (key-based access)
 - `Project` — is_featured, published_at
 
 ### Filament Resources
-- Settings — SettingResource (SettingForm, SettingsTable)
-- TeamMembers — TeamMemberForm (avatar/cover_image both with ->disk('public') ->directory('team-members'))
+- Settings — SettingResource (SettingForm dynamic, SettingsTable)
+- TeamMembers — TeamMemberForm (with Repeaters for roles/abilities/skills)
+  - Repeater: roles (title, sort_order)
+  - Repeater: abilities (title, percentage, sort_order)
+  - Repeater: skills (title, icon->disk('public'), percentage, sort_order)
+  - NOTE: RelationManagers generated but disabled (getRelations: []) — using Repeaters instead
 - TeamGroups
 - Services
 - Stats
@@ -90,8 +99,8 @@ Without it, Filament uses the default disk (local/private) and files get 403.
 
 ### Layout
 - `resources/views/main/layouts/master.blade.php`
-- `resources/views/main/partials/header.blade.php` — standalone, no controller needed (uses setting() helper directly)
-- `resources/views/main/partials/footer.blade.php` — standalone, no controller needed
+- `resources/views/main/partials/header.blade.php` — no controller, uses setting() directly
+- `resources/views/main/partials/footer.blade.php` — no controller, uses setting() directly
 
 ### Homepage
 - View: `resources/views/main/pages/home.blade.php`
@@ -106,7 +115,7 @@ Without it, Filament uses the default disk (local/private) and files get 403.
 - `$teamMembers` — TeamMember::where(is_active)->orderBy(full_name)->get()
 - `$projects` — Project::where(is_featured)->latest(published_at)->get()
 
-#### Section IDs (for header nav):
+#### Section IDs:
 | Section | id |
 |---|---|
 | Hero | `home` |
@@ -117,12 +126,19 @@ Without it, Filament uses the default disk (local/private) and files get 403.
 | Stats | `stats` |
 | Contact | `contacts` |
 
+### Team Member Detail Page
+- View: `resources/views/main/pages/team-member.blade.php` (template added, not yet dynamic)
+- Controller: `app/Http/Controllers/TeamMemberController.php`
+- Route: `GET /team/{slug}` → `TeamMemberController@show` (name: team.show)
+- Controller loads: `->with(['roles', 'abilities', 'skills'])->where('slug',...)->where('is_active', true)->firstOrFail()`
+- Homepage card links to detail: `data-url="{{ route('team.show', $member->slug) }}"`
+
 ### Important Blade Rules
 - Plain text settings: `{{ setting('key') }}`
 - HTML settings (e.g. about_text): `{!! setting('key') !!}`
 - File/image/video URLs: `{{ Storage::url(setting('key')) }}`
 - Team member avatars: `{{ $member->avatar ? Storage::url($member->avatar) : asset('assets/images/default-avatar.png') }}`
-- Phone numbers: always add `style="unicode-bidi: plaintext; direction: ltr; white-space: nowrap;"` to avoid RTL rendering issues
+- Phone numbers: always add `style="unicode-bidi: plaintext; direction: ltr; white-space: nowrap;"` to avoid RTL rendering
 - Storage import at top of view: `@php use Illuminate\Support\Facades\Storage; @endphp`
 
 ---

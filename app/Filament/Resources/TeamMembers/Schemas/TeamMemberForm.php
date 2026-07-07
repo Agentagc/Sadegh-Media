@@ -83,6 +83,8 @@ class TeamMemberForm
                             ->numeric()
                             ->minValue(0)
                             ->maxValue(100)
+                            ->step(1)
+                            ->suffix('٪')
                             ->required(),
                         TextInput::make('sort_order')
                             ->label('ترتیب')
@@ -111,6 +113,8 @@ class TeamMemberForm
                             ->numeric()
                             ->minValue(0)
                             ->maxValue(100)
+                            ->step(1)
+                            ->suffix('%')
                             ->required(),
                         TextInput::make('sort_order')
                             ->label('ترتیب')

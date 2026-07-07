@@ -18,23 +18,30 @@
 - Homepage section IDs fixed (home, about, team, skills, services, stats, contacts)
 - Header nav links fixed (desktop + mobile)
 - Phone number RTL fix (unicode-bidi + direction: ltr)
+- MemberRole, MemberAbility, MemberSkill models + migrations
+- TeamMember relations: roles(), abilities(), skills()
+- TeamMemberForm: Repeaters for roles/abilities/skills
+- TeamMemberController + Route (GET /team/{slug} → team.show)
+- team-member.blade.php view added (template, not yet dynamic)
 
 ---
 
 ## 🔄 In Progress
 
-- Team Member detail page (new page, route, controller, Blade)
+- Team Member detail page — wire $member data to Blade
 
 ---
 
 ## 🎯 Demo — remaining
 
-- [ ] Team Member detail page
-  - Route: GET /team/{slug}
-  - Controller: TeamMemberController@show
-  - View: resources/views/main/pages/team-member.blade.php
-  - Fields to show: avatar, full_name, role_title, bio, cover_image, projects
-  - Link from homepage team cards to detail page
+- [ ] Team Member detail page dynamic
+  - avatar → profile image
+  - full_name, role_title → h3 title
+  - bio → sidebar description
+  - roles → animated titles (cd-words-wrapper)
+  - abilities → progress bars (title + percentage)
+  - skills → skill cards (icon + percentage + title)
+  - contact info → setting('contact_phone'), setting('contact_email')
 
 - [ ] Stats section dynamic (key-based via $stats->firstWhere('key', '...'))
   - years_experience → special card (left side)
@@ -45,18 +52,19 @@
 ## ⏸️ Post-Demo
 
 ### Settings
-- [ ] hero_description field wired to homepage
+- [ ] hero_description wired to homepage
 - [ ] hero_button_text + hero_button_url — add button to hero section
 - [ ] Social links dynamic (instagram, telegram, linkedin, github in header/footer)
 
-### Validation
-- [ ] Required/max size rules per SettingType in SettingForm
-- [ ] JSON editor improvement (syntax highlighting or validation)
-- [ ] RichEditor styling in frontend
-
 ### Admin
+- [ ] RelationManagers for TeamMember (roles/abilities/skills) — currently disabled, using Repeaters
 - [ ] Roles & Permissions
 - [ ] User management
+
+### Validation
+- [ ] Required/max size rules per SettingType in SettingForm
+- [ ] JSON editor improvement
+- [ ] RichEditor styling in frontend
 
 ### Optimization
 - [ ] Query optimization (N+1 checks)

@@ -17,7 +17,7 @@
                                 <a href="index.html">
                                     <img
                                         alt="Virtuo - Personal Portfolio HTML Template for developers and freelancers"
-                                        src="assets/images/logo/white-logo-reeni.png"
+                                        src="{{ asset("assets/images/logo/white-logo-reeni.png") }}"
                                     />
                                 </a>
                             </div>
@@ -78,7 +78,7 @@
                                 <li>
                       <span class="ft-icon"
                       ><i class="fa-solid fa-envelope"></i></span
-                      ><a href="mailto:{{ setting('email') }}">{{ setting('contact_email') }}</a>
+                      ><a href="mailto:{{ setting('contact_email') }}">{{ setting('contact_email') }}</a>
                                 </li>
                                 <li>
                       <span class="ft-icon"
@@ -88,7 +88,7 @@
                                 <li>
                       <span class="ft-icon"
                       ><i class="fa-solid fa-phone"></i></span
-                      ><a href="tel:{{ setting('phone') }}" style="unicode-bidi: plaintext; direction: ltr; white-space: nowrap; display: inline-block;">{{ setting('contact_phone') }}</a>
+                      ><a href="tel:{{ setting('contact_phone') }}" style="unicode-bidi: plaintext; direction: ltr; white-space: nowrap; display: inline-block;">{{ setting('contact_phone') }}</a>
                                 </li>
                             </ul>
 {{--                            <div class="social-link footer">--}}
@@ -117,7 +117,7 @@
                 <div class="col-lg-12">
                     <div class="main-wrapper">
                         <p class="copy-right-para tmp-link-animation">
-                            ©<a href="#" target="_blank"><a href="#" target="_blank"> {{ setting('site_title') }} </a></a>
+                            © <a href="#" target="_blank"> {{ setting('site_title') }} </a>
                             <script>
                                 document.write(new Date().getFullYear());
                             </script>
@@ -137,7 +137,7 @@
         <img
             alt="Top Light Shape"
             class="blocksync-scroll-trigger fade_in animation-order-8"
-            src="assets/images/banner/shape/light.svg"
+            src="{{ asset("assets/images/banner/shape/light.svg") }}"
         />
     </div>
     <div class="slider-bg-dot-shape">

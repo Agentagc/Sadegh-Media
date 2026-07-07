@@ -9,12 +9,12 @@
                                 <img
                                     alt="Virtuo - Personal Portfolio HTML Template for developers and freelancers"
                                     class="logo-dark"
-                                    src="assets/images/logo/white-logo-reeni.png"
+                                    src="{{ asset("assets/images/logo/white-logo-reeni.png") }}"
                                 />
                                 <img
                                     alt="Virtuo - Personal Portfolio HTML Template for developers and freelancers"
                                     class="logo-white"
-                                    src="assets/images/logo/white-logo-reeni.png"
+                                    src="{{ asset("assets/images/logo/white-logo-reeni.png") }}"
                                 />
                             </a>
                         </div>
