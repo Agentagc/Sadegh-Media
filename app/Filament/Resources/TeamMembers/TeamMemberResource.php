@@ -13,6 +13,10 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use App\Filament\Resources\TeamMembers\RelationManagers;
+use App\Filament\Resources\TeamMembers\RelationManagers\RolesRelationManager;
+use App\Filament\Resources\TeamMembers\RelationManagers\AbilitiesRelationManager;
+use App\Filament\Resources\TeamMembers\RelationManagers\SkillsRelationManager;
 
 class TeamMemberResource extends Resource
 {
@@ -43,7 +47,6 @@ class TeamMemberResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
         ];
     }
 

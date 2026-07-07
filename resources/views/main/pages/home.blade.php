@@ -38,8 +38,9 @@
         </div>
     </div>
     <!-- tmp banner area end -->
+
     <!-- tmp text para start -->
-    <div class="about-content-area">
+    <div class="about-content-area" id="about">
         <div class="container tmp-section-gapTop">
             <div class="text-para-doc-wrap">
                 <h2 class="text-para-documents tmp-scroll-trigger tmp-fade-in tmp-title-split-2 animation-order-1">
@@ -55,8 +56,9 @@
         </div>
     </div>
     <!-- tmp text para end -->
+
     <!-- tmp Team Members Start -->
-    <div class="cfx-section">
+    <div class="cfx-section" id="team">
 
         <div class="section-title-brand-area tmp-section-gapTop">
             <div class="container">
@@ -116,10 +118,11 @@
         </script>
     </div>
     <!-- tmp Team Members End -->
+
     <!-- Tpm My Skill Area Start -->
     <section
         class="my-skill-area-style-two plr--120 plr_lg--30 plr_md--30 plr_sm--30 plr_mobile--15 mt--10"
-        id="resume"
+        id="skills"
     >
         <div
             class="tpm-custom-box-bg position-relative overflow-hidden border--radious-20"
@@ -227,8 +230,9 @@
         </div>
     </section>
     <!-- Tpm My Skill Area End -->
+
     <!--    tmp service Area start-->
-    <section class="resume-section tmp-section-gapTop" id="resume-section">
+    <section class="resume-section tmp-section-gapTop" id="services">
         <div class="container">
             <div class="row animation-action-3">
                 <div class="col-md-6">
@@ -289,8 +293,9 @@
         </div>
     </section>
     <!--    tmp service Area end-->
+
     <!-- Tpm Stats Area Start -->
-    <section class="service-area tmp-section-gap" id="service"  >
+    <section class="service-area tmp-section-gap" id="stats"  >
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-3 col-md-4 col-sm-6">
@@ -435,10 +440,6 @@
         </div>
     </section>
     <!-- Tpm Stats Area End -->
-
-
-
-
 
     <!-- Tpm Get In touch start -->
     <section class="get-in-touch-area tmp-section-gap" id="contacts">
@@ -691,6 +692,7 @@
         </div>
     </div>
     <!-- End trigger modal -->
+
     <!-- Modal Portfolio Body area Start -->
     <div aria-hidden="true" class="modal fade" id="exampleModalCenter" role="dialog" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -757,6 +759,7 @@
         </div>
     </div>
     <!-- End Modal Portfolio area -->
+
     <!-- progress area start -->
     <div class="scrollToTop" style="display: block;">
         <div class="arrowUp">

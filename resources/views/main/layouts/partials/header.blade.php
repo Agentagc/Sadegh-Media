@@ -16,20 +16,13 @@
                     <div class="tmp-mainmenu-nav d-none d-xl-block">
                         <nav class="navbar-example2 onepagenav">
                             <ul class="tmp-mainmenu nav nav-pills">
-                                <li class="current"><a class="smoth-animation" href="index-09.html#home">خانه</a></li>
-                                <li class="nav-item"><a class="smoth-animation" href="index-09.html#about">در مورد</a>
-                                </li>
-                                <li class="nav-item"><a class="smoth-animation" href="index-09.html#service">خدمات</a>
-                                </li>
-                                <li class="nav-item"><a class="smoth-animation" href="index-09.html#portfolio">نمونه
-                                        کارها</a></li>
-                                <li class="nav-item"><a class="smoth-animation" href="index-09.html#resume">رزومه</a>
-                                </li>
-                                <li class="nav-item"><a class="smoth-animation" href="index-09.html#pricing">قیمت
-                                        گذاری</a></li>
-                                <li class="nav-item"><a class="smoth-animation" href="index-09.html#blog">وبلاگ</a></li>
-                                <li class="nav-item"><a class="smoth-animation" href="index-09.html#contacts">تماس</a>
-                                </li>
+                                <li class="current"><a class="smoth-animation" href="#home">خانه</a></li>
+                                <li class="nav-item"><a class="smoth-animation" href="#about">درباره</a></li>
+                                <li class="nav-item"><a class="smoth-animation" href="#team">اعضای تیم</a></li>
+                                <li class="nav-item"><a class="smoth-animation" href="#skills">مهارت ها</a></li>
+                                <li class="nav-item"><a class="smoth-animation" href="#services">خدمات</a></li>
+                                <li class="nav-item"><a class="smoth-animation" href="#stats">آمار</a></li>
+                                <li class="nav-item"><a class="smoth-animation" href="#contacts">تماس</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -71,13 +64,13 @@
                 </div>
             </div>
             <ul class="tmp-mainmenu onepagenav-click">
-                <li><a class="smoth-animation" href="index-09.html#home">خانه</a></li>
-                <li><a class="smoth-animation" href="index-09.html#service">خدمات</a></li>
-                <li><a class="smoth-animation" href="index-09.html#portfolio">نمونه کارها</a></li>
-                <li><a class="smoth-animation" href="index-09.html#resume">رزومه</a></li>
-                <li><a class="smoth-animation" href="index-09.html#pricing">قیمت گذاری</a></li>
-                <li><a class="smoth-animation" href="index-09.html#blog">وبلاگ</a></li>
-                <li><a class="smoth-animation" href="index-09.html#contacts">تماس</a></li>
+                <li><a class="smoth-animation" href="#home">خانه</a></li>
+                <li><a class="smoth-animation" href="#about">درباره</a></li>
+                <li><a class="smoth-animation" href="#team">اعضای تیم</a></li>
+                <li><a class="smoth-animation" href="#skills">مهارت ها</a></li>
+                <li><a class="smoth-animation" href="#services">خدمات</a></li>
+                <li><a class="smoth-animation" href="#stats">آمار</a></li>
+                <li><a class="smoth-animation" href="#contacts">تماس</a></li>
             </ul>
             <!-- social sharea area -->
             <div class="social-wrapper mt--40">
