@@ -11,17 +11,28 @@
             <div class="inner">
                 <div class="header-top">
                     <div class="logo">
-                        <a class="logo-area" href="index.html">
-                            <img
-                                alt="Virtuo - Personal Portfolio HTML Template for developers and freelancers"
-                                class="logo-dark"
-                                src="{{ asset("assets/images/logo/white-logo-reeni.png") }}"
-                            />
-                            <img
-                                alt="Virtuo - Personal Portfolio HTML Template for developers and freelancers"
-                                class="logo-white"
-                                src="{{ asset("assets/images/logo/dark-logo-virtuo.png") }}"
-                            />
+                        <a class="logo-area" href="{{ url('/') }}">
+{{--                            <img--}}
+{{--                                alt="Virtuo - Personal Portfolio HTML Template for developers and freelancers"--}}
+{{--                                class="logo-dark"--}}
+{{--                                src="{{ asset("assets/images/logo/white-logo-reeni.png") }}"--}}
+{{--                            />--}}
+{{--                            <img--}}
+{{--                                alt="Virtuo - Personal Portfolio HTML Template for developers and freelancers"--}}
+{{--                                class="logo-white"--}}
+{{--                                src="{{ asset("assets/images/logo/dark-logo-virtuo.png") }}"--}}
+{{--                            />--}}
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <img
+                                    src="{{ asset('assets/images/logo/sadegh-media-01-noBG-light.png') }}"
+                                    alt="رسانه صادق"
+                                    style="width: 70px; height: 70px; border-radius: 14px; object-fit: cover; margin-top: 8px;"
+                                />
+                                <span
+                                    style="font-family: 'Gofteh',sans-serif, Tahoma, sans-serif; font-size: 24px; font-weight: 500; color: white;">
+                                    رسانه صادق
+                                </span>
+                            </div>
                         </a>
                     </div>
                     <div class="close-menu">
@@ -31,24 +42,15 @@
                     </div>
                 </div>
                 <ul class="tmp-mainmenu onepagenav">
-                    <li>
-                        <a href="index-04.html#home">خانه</a>
-                    </li>
-                    <li>
-                        <a href="index-04.html#about">در مورد</a>
-                    </li>
-                    <li>
-                        <a href="index-04.html#service">خدمات</a>
-                    </li>
-                    <li>
-                        <a href="index-04.html#portfolio">طرح</a>
-                    </li>
-                    <li>
-                        <a href="index-04.html#blog">وبلاگ</a>
-                    </li>
-                    <li>
-                        <a href="index-04.html#contacts">تماس</a>
-                    </li>
+                    <li><a href="#home">معرفی</a></li>
+                    @if($member->abilities->isNotEmpty())
+                        <li><a href="#abilities">توانایی‌ها</a></li>
+                    @endif
+                    <li><a href="#resume">رزومه</a></li>
+                    @if($member->skills->isNotEmpty())
+                        <li><a href="#skills">تخصص‌ها</a></li>
+                    @endif
+                    <li><a href="{{ url('/') }}">بازگشت به خانه</a></li>
                 </ul>
                 <div class="social-wrapper mt--40">
                     <span class="subtitle">با من پیدا کن</span>
@@ -81,9 +83,12 @@
                                 من<br/>{{ $member->full_name }} هستم.<br/>یک
                                 <span class="header-caption">
                     <span class="cd-headline clip is-full-width">
-                      <span class="cd-words-wrapper" style="width: 228.812px">
+                      <span class="cd-words-wrapper" style=" background: rgba(0, 0, 0, 0.35);
+                      border-radius: 12px;
+                      padding: 2px 10px;
+                      backdrop-filter: blur(3px);">
                           @foreach($member->roles as $index => $role)
-                              <b class="theme-gradient {{ $index === 0 ? 'is-visible' : 'is-hidden' }}">
+                              <b class="theme-gradient {{ $index === 0 ? 'is-visible' : 'is-hidden' }} ">
                                   {{ $role->title }}
                               </b>
                           @endforeach
@@ -106,9 +111,10 @@
                                     <i class="fa-regular fa-house"></i>معرفی کردن
                                 </h4>
                                 <h1 class="">سلام، من <strong><span
-                                            class="theme-gradient">{{ $member->full_name }} </span><br/> یک <span
-                                            class="theme-gradient">{{ $member->role_title }}</span> هستم
-                                    </strong></h1>
+                                            class="theme-gradient">{{ $member->full_name }} </span></strong><br/> یک
+                                    <strong><span
+                                            class="theme-gradient">{{ $member->role_title }}</span></strong> هستم
+                                </h1>
                                 <p class="">{{ $member->bio }}</p>
                             </div>
                         </div>
@@ -209,6 +215,7 @@
                         <!-- tmp IDK area start -->
                         <div
                             class="tmp-section-gapBottom banner-personal-portfolio experience-style-list signle-section"
+                            id="resume"
                         >
                             <div class="section-header pb--20">
                                 <h4 class="subtitle wow move-right">
@@ -300,7 +307,8 @@
                         <!-- tmp skill area start  -->
                         @if($member->skills->isNotEmpty())
                             <div
-                                class="tmp-service-area tmp-section-gapBottom banner-personal-portfolio signle-section">
+                                class="tmp-service-area tmp-section-gapBottom banner-personal-portfolio signle-section"
+                                id="skills">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="section-header">

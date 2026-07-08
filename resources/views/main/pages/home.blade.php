@@ -12,7 +12,7 @@
             <div class="banner-one-main-wrapper">
                 <div class="row align-items-center">
                     <div class="col-lg-12">
-                        <div class="inner banner-model-15">
+                        <div class="inner banner-model-15" style="user-select: none;">
                             <h1 class="title tmp-fade-in">{{ setting('site_title') }}</h1>
                             <p class="disc tmp-fade-in">{{ setting('hero_title') }}</p>
                         </div>
@@ -32,7 +32,7 @@
         <div class="hero-bg-video">
             <video autoplay="" id="myVideo" loop="" muted="" class="hero-video">
                 <source src="{{ Storage::url(setting('hero_video')) }}" type="video/mp4">
-{{--                <source src="assets/images/video/fitness.mp4" type="video/mp4">--}}
+                {{--                <source src="assets/images/video/fitness.mp4" type="video/mp4">--}}
                 <h1>test</h1>
             </video>
         </div>
@@ -47,10 +47,10 @@
                     {!! setting('about_text') !!}
                 </h2>
                 <div class="right-bg-text-para">
-                    <img alt="" src="assets/images/banner/right-bg-text-para-doc.png"/>
+                    <img alt="" src="{{ asset("assets/images/banner/right-bg-text-para-doc.png") }}"/>
                 </div>
                 <div class="left-bg-text-para">
-                    <img alt="" src="assets/images/banner/left-bg-text-para-doc.png"/>
+                    <img alt="" src="{{ asset("assets/images/banner/left-bg-text-para-doc.png") }}"/>
                 </div>
             </div>
         </div>
@@ -83,8 +83,10 @@
                             <!-- ===== EXAMPLE STATIC CARDS — replace with your own loop/data ===== -->
                             @foreach($teamMembers as $member)
                                 <div class="cfx-card"
-                                 data-img="{{ $member->avatar ? Storage::url($member->avatar) : asset('assets/images/default-avatar.png') }}"
-                                 data-sub="{{ $member->role_title }}" data-title="{{ $member->full_name }}"></div>
+                                     data-img="{{ $member->avatar ? Storage::url($member->avatar) : asset('assets/images/default-avatar.png') }}"
+                                     data-sub="{{ $member->role_title }}" data-title="{{ $member->full_name }}"
+                                     data-url="{{ route('team.show', $member->slug) }}">
+                                </div>
                             @endforeach
 
                             <!-- ===== END EXAMPLE CARDS ===== -->
@@ -295,7 +297,7 @@
     <!--    tmp service Area end-->
 
     <!-- Tpm Stats Area Start -->
-    <section class="service-area tmp-section-gap" id="stats"  >
+    <section class="service-area tmp-section-gap" id="stats">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-3 col-md-4 col-sm-6">

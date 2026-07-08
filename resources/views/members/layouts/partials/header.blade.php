@@ -5,42 +5,40 @@
                 <div class="header-fluid-main-wrapper">
                     <div class="left-area">
                         <div class="logo">
-                            <a href="index.html">
-                                <img
-                                    alt="Virtuo - Personal Portfolio HTML Template for developers and freelancers"
-                                    class="logo-dark"
-                                    src="{{ asset("assets/images/logo/white-logo-reeni.png") }}"
-                                />
-                                <img
-                                    alt="Virtuo - Personal Portfolio HTML Template for developers and freelancers"
-                                    class="logo-white"
-                                    src="{{ asset("assets/images/logo/white-logo-reeni.png") }}"
-                                />
+                            <a href="{{ url('/') }}">
+{{--                                <img--}}
+{{--                                    alt="Virtuo - Personal Portfolio HTML Template for developers and freelancers"--}}
+{{--                                    class="logo-dark"--}}
+{{--                                    src="{{ asset("assets/images/logo/white-logo-reeni.png") }}"--}}
+{{--                                />--}}
+{{--                                <img--}}
+{{--                                    alt="Virtuo - Personal Portfolio HTML Template for developers and freelancers"--}}
+{{--                                    class="logo-white"--}}
+{{--                                    src="{{ asset("assets/images/logo/white-logo-reeni.png") }}"--}}
+{{--                                />--}}
+                                <div style="display: flex; align-items: center; gap: 12px;">
+                                    <img
+                                        src="{{ asset('assets/images/logo/sadegh-media-01-noBG-light.png') }}"
+                                        alt="رسانه صادق"
+                                        style="width: 70px; height: 70px; border-radius: 14px; object-fit: cover; margin-top: 8px;"
+                                    />
+                                    <span
+                                        style="font-family: 'Gofteh',sans-serif, Tahoma, sans-serif; font-size: 24px; font-weight: 500; color: white;">
+                                    رسانه صادق
+                                </span>
+                                </div>
                             </a>
                         </div>
-                        <nav class="tmp-mainmenu-nav d-none d-xl-block">
+                        <nav class="tmp-mainmenu-nav d-none d-xl-block" style="position: absolute; left: 50%; transform: translateX(-50%);">
                             <ul class="tmp-mainmenu onepagenav">
-                                <li>
-                                    <a href="index-04.html#home">خانه</a>
-                                </li>
-                                <li>
-                                    <a href="index-04.html#about">در مورد</a>
-                                </li>
-                                <li>
-                                    <a href="index-04.html#service">خدمات</a>
-                                </li>
-                                <li>
-                                    <a href="index-04.html#portfolio">طرح</a>
-                                </li>
-                                <li>
-                                    <a href="index-04.html#pricing">قیمت گذاری</a>
-                                </li>
-                                <li>
-                                    <a href="index-04.html#blog">وبلاگ</a>
-                                </li>
-                                <li>
-                                    <a href="index-04.html#contacts">تماس</a>
-                                </li>
+                                <li><a href="#home">معرفی</a></li>
+                                @if(isset($member) && $member->abilities->isNotEmpty())
+                                    <li><a href="#abilities">توانایی‌ها</a></li>
+                                @endif
+                                <li><a href="#resume">رزومه</a></li>
+                                @if(isset($member) && $member->skills->isNotEmpty())
+                                    <li><a href="#skills">تخصص‌ها</a></li>
+                                @endif
                             </ul>
                         </nav>
                     </div>

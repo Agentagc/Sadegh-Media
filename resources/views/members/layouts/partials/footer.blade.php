@@ -15,10 +15,22 @@
                         <div class="single-footer-wrapper border-right mr--20">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img
-                                        alt="Virtuo - Personal Portfolio HTML Template for developers and freelancers"
-                                        src="{{ asset("assets/images/logo/white-logo-reeni.png") }}"
-                                    />
+{{--                                    <img--}}
+{{--                                        alt="Virtuo - Personal Portfolio HTML Template for developers and freelancers"--}}
+{{--                                        src="{{ asset("assets/images/logo/white-logo-reeni.png") }}"--}}
+{{--                                    />--}}
+
+                                    <div style="display: flex; align-items: center; gap: 16px;">
+                                        <img
+                                            src="{{ asset('assets/images/logo/sadegh-media-01.jpg') }}"
+                                            alt="رسانه صادق"
+                                            style="width: 65px; height: 65px; border-radius: 14px; object-fit: cover; margin-top: 8px;"
+                                        />
+                                        <span
+                                            style="font-family: 'Gofteh',sans-serif !important;, Tahoma, sans-serif; font-size: 38px; font-weight: 500; color: white;">
+                                    رسانه صادق
+                                </span>
+                                    </div>
                                 </a>
                             </div>
                             <p class="description">

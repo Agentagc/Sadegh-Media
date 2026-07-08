@@ -1106,7 +1106,15 @@ video.addEventListener('canplay', function () {
                 (title ? '<p class="cfx-title">' + title + '</p>' : '') +
                 '</div>';
 
-            card.addEventListener('click', function () { active = i; render(); });
+            // card.addEventListener('click', function () { active = i; render(); });
+            card.addEventListener('click', function () {
+                if (active === i && card.dataset.url) {
+                    window.location.href = card.dataset.url;
+                } else {
+                    active = i;
+                    render();
+                }
+            });
 
             var dot = document.createElement('div');
             dot.className = 'cfx-dot';

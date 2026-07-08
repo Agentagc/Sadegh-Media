@@ -6,11 +6,24 @@
             <div class="col-lg-12">
                 <div class="header-content">
                     <div class="logo">
-                        <a href="index.html">
-                            <img alt="Virtuo - Personal Portfolio HTML Template for developers and freelancers"
-                                 class="logo-dark" src="{{asset("assets/images/logo/white-logo-reeni.png")}}"/>
-                            <img alt="Virtuo - Personal Portfolio HTML Template for developers and freelancers"
-                                 class="logo-white" src="{{asset("assets/images/logo/dark-logo-virtuo.png")}}"/>
+                        <a href="{{ url("/") }}">
+                            {{--                            <img alt="Virtuo - Personal Portfolio HTML Template for developers and freelancers"--}}
+                            {{--                                 class="logo-dark" src="{{asset("assets/images/logo/white-logo-reeni.png")}}"/>--}}
+
+                            {{--                            <img alt="Virtuo - Personal Portfolio HTML Template for developers and freelancers"--}}
+                            {{--                                 class="logo-white" src="{{asset("assets/images/logo/dark-logo-virtuo.png")}}"/>--}}
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <img
+                                    src="{{ asset('assets/images/logo/sadegh-media-01-noBG-light.png') }}"
+                                    alt="رسانه صادق"
+                                    style="width: 70px; height: 70px; border-radius: 14px; object-fit: cover; margin-top: 8px;"
+                                />
+                                <span
+                                    style="font-family: 'Gofteh',sans-serif, Tahoma, sans-serif; font-size: 24px; font-weight: 500; color: white;">
+                                    رسانه صادق
+                                </span>
+                            </div>
+
                         </a>
                     </div>
                     <div class="tmp-mainmenu-nav d-none d-xl-block">
@@ -52,9 +65,20 @@
         <div class="inner">
             <div class="header-top">
                 <div class="logo">
-                    <a class="logo-area" href="index.html">
-                        <img alt="logo" class="logo-dark" src="assets/images/logo/white-logo-reeni.png"/>
-                        <img alt="logo" class="logo-white" src="assets/images/logo/dark-logo-virtuo.png"/>
+                    <a class="logo-area" href="{{ url("/") }}">
+{{--                        <img alt="logo" class="logo-dark" src="assets/images/logo/white-logo-reeni.png"/>--}}
+{{--                        <img alt="logo" class="logo-white" src="assets/images/logo/dark-logo-virtuo.png"/>--}}
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <img
+                                src="{{ asset('assets/images/logo/sadegh-media-01-noBG-light.png') }}"
+                                alt="رسانه صادق"
+                                style="width: 70px; height: 70px; border-radius: 14px; object-fit: cover; margin-top: 8px;"
+                            />
+                            <span
+                                style="font-family: 'Gofteh',sans-serif, Tahoma, sans-serif; font-size: 24px; font-weight: 500; color: white;">
+                                    رسانه صادق
+                                </span>
+                        </div>
                     </a>
                 </div>
                 <div class="close-menu">
