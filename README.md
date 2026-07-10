@@ -18,6 +18,16 @@
 
 ---
 
+> ## ⚡ Zero Code Changes. Fully Dynamic. Ready for Any Brand.
+>
+> **Every single piece of content — logo, hero video, team members, services, stats, contact info — is managed entirely through the admin panel.**
+>
+> Want to rebrand it for a different team or company?
+> Just log in, update the settings, and you're done.
+> **No touching the code. Ever.**
+
+---
+
 ## 📖 Overview
 
 **Sadegh Media** is a demo website for showcasing a media team, built with **Laravel 13** and **Filament 5**. It consists of a fully dynamic public-facing website and a complete admin panel for managing all site content — from hero videos to team member skill cards.
